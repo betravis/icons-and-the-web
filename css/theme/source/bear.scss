@@ -1,0 +1,281 @@
+/**
+ * Theme for Moving Web Standards Forward Talk
+ * (c) 2013
+ */
+
+
+// Default mixins and settings -----------------
+@import "reveal.js/css/theme/template/mixins";
+@import "reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+
+@mixin vendor-prefix( $property, $value ) {
+    -webkit-#{$property} : $value;
+    -moz-#{$property} : $value;
+    -o-#{$property}: $value;
+    -ms-#{$property}: $value;
+    #{$property}: $value;
+}
+
+// Theme colors
+$red: rgb(255, 0, 0);
+$orange: rgb(251, 176, 52);
+$yellow: rgb(255, 221, 0);
+$green: rgb(193, 216, 47);
+$blue: rgb(0, 164, 228);
+$purple: rgb(131, 72, 181);
+
+$lightGrey: rgb(218, 221, 224);
+$grey: rgb(172, 179, 185);
+$darkGrey: rgb(107, 115, 123);
+
+$lightTan: rgb(228, 223, 217);
+$tan: rgb(192, 181, 169);
+$darkTan: rgb(136, 120, 104);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'museo-sans', 'Adobe Clean', 'Source Sans Pro', sans-serif;
+$mainColor: $lightTan;
+$headingFont: 'museo', 'AdobeClean-BoldSemiCn', 'Adobe Clean', 'Source Sans Pro', sans-serif;
+$headingColor: $lightTan;
+$headingLetterSpacing: 0;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: darken($darkGrey, 30%);
+$linkColor: $blue;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #134674;
+
+.inverse .reveal {
+    color: $backgroundColor;
+    h1, h2, h3, h4, h5, h6 { color: $backgroundColor; }
+    .state-background { background-color: darken($mainColor, 30%); }
+}
+
+.inverse {
+    color: $backgroundColor;
+    background-color: darken($mainColor, 30%);
+}
+
+// Background generator
+@mixin bodyBackground() {
+
+}
+
+.reveal code, .reveal .monospace {
+    font-family: 'Source Code Pro', monospace;
+    white-space: pre;
+}
+
+.reveal .show-container {
+    border: 2px solid $mainColor;
+    padding: .5em;
+    display: inline-block;
+}
+.reveal pre {
+    font-size: 1em;
+    width: 100%;
+}
+
+.reveal .slides { text-align: center; }
+
+.reveal section { text-align: inherit; }
+
+.reveal section.align-center { text-align: center; }
+
+.reveal section.align-left { text-align: left; }
+
+.reveal section.align-right { text-align: right; }
+
+// Theme template ------------------------------
+@import "reveal.js/css/theme/template/theme";
+// ---------------------------------------------
+
+/* could insert a media query here to adjust font size / slide-size for larger screens */
+/* @media screen and (min-width: 900px and min-height: 600px ) ... */
+
+.reveal .highlight { color: $blue; }
+
+.ribbon-small, .ribbon, .ribbon-big { width: 100%; }
+
+.ribbon-small, .ribbon, .ribbon-big {
+    > img, > object {
+        vertical-align: middle;
+        height:64px;
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+    }
+}
+
+.ribbon {
+    > img, > object {
+        height: 128px;
+    }
+}
+
+.ribbon-big {
+    > img, > object {
+        height: 256px;
+    }
+}
+
+.reveal img.plain {
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+.align-right img.floater {
+    position: absolute;
+    left: -100px;
+    top: -100px;
+    max-height: 400px;
+}
+
+.align-left img.floater {
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    max-height: 400px;
+}
+
+img.float-right {
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    max-height: 400px;
+}
+
+/* Color Schemes */
+$carpetRed: rgb(230, 63, 79);
+.bg-red .reveal {
+    color: $lightGrey;
+    h1, h2, h3, h4, h5, h6 { color: $lightGrey; }
+    .state-background { @include radial-gradient( darken($carpetRed, 60%), darken($carpetRed, 40%), ellipse ); }
+}
+
+.bg-brown .reveal {
+    color: $lightGrey;
+    h1, h2, h3, h4, h5, h6 { color: $lightGrey; }
+    .state-background { background-color: darken($darkTan, 30%); }
+    .highlight { color: $green; }
+}
+
+.bg-brown.inverse .reveal {
+    color: $darkTan;
+    h1, h2, h3, h4, h5, h6 { color: $darkTan; }
+    .state-background { background-color: lighten($lightTan, 30%); }
+    .highlight { color: $green; }
+}
+
+.profile .reveal {
+    .state-background {
+        background: -webkit-radial-gradient(left bottom, 100% 100%, transparent, transparent 90%, $backgroundColor 90%), url('profile.jpg');
+        background-size: 50% 100%, 50% auto;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        @include vendor-prefix(transition, none);
+    }
+}
+
+.gradient .reveal .state-background {
+    background: -webkit-linear-gradient(bottom left, lighten($backgroundColor, 30%), $backgroundColor);
+}
+
+.reveal {
+    h1, h2, h3, h4, h5, h6 { line-height: 1.1em; font-weight: 900; }
+}
+
+.reveal .comment {
+    margin: 1em;
+    > * { display: inline-block; vertical-align: middle; }
+    .icon { font-size: 3em; }
+    .content {
+        margin-left: 1em;
+        margin-right: 3em;
+        position: relative;
+        border-radius: 1em;
+        padding: 1em;
+        min-height: 3em;
+        background-color: darken($mainColor, 30%);
+        color: $backgroundColor;
+    }
+    .content:before {
+        position: absolute;
+        width: 0; height: 0;
+        right: 100%;
+        border: 1em solid transparent;
+        border-left-width: 0;
+        border-right-color: darken($mainColor, 30%);
+        content: ' ';
+    }
+}
+.reveal .comment.right {
+    .content {
+        margin-left: 3em;
+        margin-right: 1em;
+    }
+    .content:before {
+        left: 100%;
+        border-left: 1em solid darken($mainColor, 30%);
+        border-right-width: 0;
+    }
+}
+
+.reveal .comment.bottom {
+    .content {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+    .content:before {
+        top: 100%;
+        left: 50%;
+        margin-left: -1em;
+        border: 1em solid transparent;
+        border-bottom-width: 0;
+        border-top: 1em solid darken($mainColor, 30%);
+    }
+}
+
+.reveal .wedge {
+    min-height: 3em;
+    position: relative;
+    padding-top: 2em;
+    :before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -1em;
+        border: 1em solid transparent;
+        border-top-color: $backgroundColor;
+        content: ' ';
+    }
+}
+
+.reveal a.no-roll {
+    @include vendor-prefix(perspective, 0);
+    line-height: 1;
+    vertical-align: baseline;
+}
+
+.reveal {
+    .green, .orange, .red { display: inline-block; border-radius: .1em; padding: .1em; }
+}
+.reveal .green {
+    background-color: #718C44;
+}
+
+.reveal .orange {
+    background-color: #e89041;
+}
+
+.reveal .red {
+    background-color: #b2382d;
+}
