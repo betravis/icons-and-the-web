@@ -1,9 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
 /**
  * Theme for Moving Web Standards Forward Talk
  * (c) 2013
  */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
 .inverse .reveal {
   color: #242729;
 }
@@ -63,9 +63,9 @@ body {
 }
 
 .reveal {
-  font-family: "museo-sans", "Adobe Clean", "Source Sans Pro", sans-serif;
+  font-family: "Adobe Clean", "Source Sans Pro", sans-serif;
   font-size: 36px;
-  font-weight: 200;
+  font-weight: normal;
   letter-spacing: -0.02em;
   color: #e4dfd9;
 }
@@ -87,7 +87,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #e4dfd9;
-  font-family: "museo", "AdobeClean-BoldSemiCn", "Adobe Clean", "Source Sans Pro", sans-serif;
+  font-family: "AdobeClean-BoldSemiCn", "Adobe Clean", "Source Sans Pro", sans-serif;
   line-height: 0.9em;
   letter-spacing: 0;
   text-transform: none;
@@ -196,6 +196,13 @@ body {
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+/*********************************************
+ * SLIDE NUMBER
+ *********************************************/
+.reveal .slide-number {
+  color: #00a4e4;
 }
 
 /* could insert a media query here to adjust font size / slide-size for larger screens */
