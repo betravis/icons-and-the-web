@@ -4,10 +4,10 @@
     <head>
         <meta charset="utf-8">
 
-        <title>reveal.js - The HTML Presentation Framework</title>
+        <title>Icons and the Web</title>
 
-        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-        <meta name="author" content="Hakim El Hattab">
+        <meta name="description" content="How icons are designed, produced, and delivered for the web">
+        <meta name="author" content="Bear Travis">
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -50,9 +50,190 @@
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
+<!-- INTRODUCTION -->
+                <section>
+                    <h1>Icons and the Web</h1>
+                    <p>
+                        <i class='icon-github-alt'></i><a href='http://github.com/betravis'>betravis</a> / <i class='icon-twitter'></i><a href="http://twitter.com/bear_travis">bear_travis</a>
+                    </p>
+                    <aside class='notes'>
+                        * Hello there, I'm Bear Travis
+                        * You can find me on github, where I've posted the slides
+                        * Or on twitter, where you can ask any questions you might have
+                        * Today, I would like to talk to you a little bit about icons, from how they are made, to how they are packaged and then delivered to your screen
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>About Me</h2>
+                    <img src='resources/web-engine-team.jpg' alt='Web Engine Team' />
+                    <aside class='notes'>
+                        * I work on the Web Platform team at Adobe
+                        * Our job is to help make the web a better creative medium
+                    </aside>
+                </section>
+
                 <section>
                     History of icons on computers
                 </section>
+
+<!-- ICON DESIGN -->
+                <section>
+                    <section>
+                        <h2>What is an Icon?</h2>
+                        <p><small>add icons here</small></p>
+                        <aside class='notes'>
+                            * An icon is a visual representation of an idea
+                            * Should be quickly recognizable and
+                            * Distinguishable from surrounding content
+                        </aside>
+                    </section>
+
+                    <section>
+                        <p><small>insert history of icons in UI design</small></p>
+                    </section>
+
+                    <section>
+                        <h2>Why are they useful?</h2>
+                    </section>
+
+                    <section>
+                        <p><small>image of iOS</small></p>
+                        <aside class='notes'>
+                            * Context is part of it -- top left tells us signal strength, probably less understandable in a different context
+                            * Top right tells us battery power
+                            * Imagine if these were both just percentages, maybe with "Signal" and "Battery Power" instead
+                            * Same information, but this is packaged in less space and less visually cluttered
+                            * Smaller screens are also probably part of why we are seeing so many of these
+                        </aside>
+                    </section>
+
+                </section>
+
+<!-- SCREEN ICONS -->
+                <section>
+                    <section>
+                        <h2>Icons on Screens</h2>
+                        <p><small>image of pixellated book icon</small></p>
+                        <aside class='notes'>
+                            * Icons are small enough that you have to start thinking about actual pixels
+                            * Always a danger if you design and display at a different size
+                        </aside>
+                    </section>
+                    <section>
+                        <p><small>image of 16->32, 32->16, 16->24, 32->24</small></p>
+                    </section>
+                    <section>
+                        <p><small>vectors</small></p>
+                    </section>
+                    <section>
+                        <h2>Good news!</h2>
+                        <aside class='notes'>
+                            * Using vectors, as screen resolutions continue to improve, you shouldn't have to worry about this (as much)
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Responsive icon design</h2>
+                    <p><small>image of iconic mic</small></p>
+                    <aside class='notes'>
+                        * One more problem worth mentioning is that finer details may get lost as a design is scaled down
+                        * Want to design for size used
+                    </aside>
+                </section>
+
+<!-- ICON DELIVERY -->
+                <section>
+                    <h2>Icon Delivery</h2>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>What is our ideal?</h2>
+                    </section>
+                    <section>
+                        <pre><code class='html'>&lt;icon&gt;name&lt;/icon&gt;</code></pre>
+                        <aside class='notes'>
+                            * The icon is a single, separable element
+                            * It has accessible content
+                            * This means we can style and size it
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Performance</h2>
+                        <aside class='notes'>
+                            * Should have minimal footprint
+                            * Preferable to load only what you need, in one resource request
+                            * No script DOM manipulation
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Easy to use</h2>
+                        <pre><code class='css'>icon { icons: url('default.icons'); }</code></pre>
+                        <aside class='notes'>
+                            * Should be easy to use, just link to the resource.
+                            * Not to say this is the ideal form, just to say it should be this easy
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Raster Icons</h2>
+                    </section>
+                    <section>
+                        <p><small>picture of a raster icon at large</small></p>
+                        <!-- or maybe an old NES sprite? -->
+                        <aside class='notes'>
+                            * You have exact control over every pixel
+                            * Well supported, everywhere that uses images
+                        </aside>
+                    </section>
+                    <section>
+                        <pre><code class='html'>&lt;i class='icon-book'&gt;&lt;/i&gt;</code></pre>
+                    </section>
+                    <section>
+<pre><code class='css'>i[class^='icon-'] { /* size and position */ }
+.icon-book { background: url('book.png'); }</code></pre>
+                    </section>
+                    <section>
+                        <h2>But you're loading multiple resources!</h2>
+                    </section>
+                    <section>
+<pre><code class='css'>.icon-book { background: url(data:image/png;base64,...); }</code></pre>
+                    </section>
+                    <section>
+                        <h2>Summary</h2>
+                        <ul>
+                            <li>Pixel-level control</li>
+                            <li>Browser support</li>
+                            <li>Fixed size</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section><h2>Spritesheets</h2></section>
+                    <section>
+                        <p><small>picture of a spritesheet</small></p>
+                    </section>
+                    <section>
+                        <pre><code class='html'>&lt;i class='icon-book'&gt;&lt;/i&gt;</code></pre>
+                    </section>
+                    <section>
+<pre><code class='css'>i[class^='icon-'] { /* size and position */ }
+.icon-book { background-image: url('spritesheet.png'); background-position: -16px 0; }</code></pre>
+                    </section>
+                    <section>
+                        <h2>Summary</h2>
+                        <ul>
+                            <li>Same pros and cons as image resources</li>
+                            <li>But with single resource load</li>
+                        </ul>
+                    </section>
+                </section>
+
 <!-- ICON FONTS -->
                 <section>
                     <h1>Icon fonts</h1>
@@ -137,6 +318,7 @@
 }
 .icon { font-family: icon-font; }
 .icon-cloud:before { content: 'f'; }</code></pre>
+                    </section>
                     <section>
                         <h1>Unicode PUA</h1>
                         <aside class='notes'>
@@ -158,16 +340,20 @@
                     <section>
                         <img src='/resources/pua-system-font.png'>
                         <aside class='notes'>
-                            * Everyone else can use them too.
+                            * Everyone else can use the PUA.
                             * This is a block of the PUA in iOS, where the system font uses that area for emoji.
                             * Fallbacks can be confusing. Get another symbol, or just a box.
                         </aside>
                     </section>
+
                     <section>
                         <h1>Ligatures</h1>
                     </section>
                     <section>
-                        <h1>fl <i class='fa fa-long-arrow-right'></i> fl (lig)</h1>
+                        <h1>fi <i class='fa fa-long-arrow-right'></i> &#xfb01;</h1>
+                    </section>
+                    <section>
+                        <h1>fish <i class='fa fa-long-arrow-right'></i> &#xfb01;sh</h1>
                         <aside class='notes'>
                             * A more advanced typography feature, ligatures, allows you to combine a sequence of code points into a single glyph
                             (is glyph the right term to use here?)
@@ -181,23 +367,117 @@
                         </aside>
                     </section>
                     <section>
-<pre><code class='css'>@font-face {
-    name: icon-font;
-    src: url(icon-font.woff);
+<pre><code class='css'>.icon {
+    font-family: icon-font;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'dlig';
 }
-.icon { font-family: icon-font; text-rendering: optimizeLegibility; font-feature-settings: 'dlig'; }
 .icon-cloud:before { content: 'cloud'; }</code></pre>
                     </section>
+                    <section>
+                        <h2>Support</h2>
+                        <table>
+                            <th><td></td>
+                                <td>IE</td>
+                                <td>FF</td>
+                                <td>CR</td>
+                                <td>S</td>
+                                <td>O</td>
+                                <td>iOS</td>
+                                <td>A</td>
+                            </th>
+                            <tr><td>ASCII</td>
+                                <td></td>
+                                <td>32</td>
+                                <td>37</td>
+                                <td>7</td>
+                                <td>24</td>
+                                <td>7.1</td>
+                                <td></td>
+                            </tr>
+                            <tr><td>PUA</td>
+                                <td></td>
+                                <td>32</td>
+                                <td>37</td>
+                                <td>7</td>
+                                <td>24</td>
+                                <td>7.1</td>
+                                <td></td>
+                            </tr>
+                            <tr><td>Ligatures</td>
+                                <td>(check 10+)</td>
+                                <td>32</td>
+                                <td>37</td>
+                                <td>7</td>
+                                <td>24</td>
+                                <td>7.1</td>
+                                <td></td>
+                            </tr>
+                        </table>
                 </section>
+
                 <section>
+                    <section>
+                        <h2>Bulletproof Font Icons</h2>
+                        <p>via <a href='http://filamentgroup.com/lab/bulletproof_icon_fonts.html'>filament group</a></p>
+                    </section>
+                    <section>
+                        <h2>Fallback to hidden</h2>
+                    </section>
+                    <section>
+                        <h2><i class='fa fa-cloud'></i> Cloud</h2>
+                        <h3>&ndash; falls back to &ndash;</h3>
+                        <h2>Cloud</h2>
+                    </section>
+                    <section>
+<pre><code class='html'>&lt;span class='icon icon-cloud'
+aria-hidden='true'></span> Cloud</code></pre>
+<pre><code class='css'>.supports-iconfont .icon:before {
+font-family: iconfont;
+}
+.supports-iconfont .icon-cloud:before {
+content: '\e0000'
+}</code></pre>
+                    </section>
+                    <section>
+                        <h2>Fallback to text</h2>
+                    </section>
+                    <section>
+                        <h2><i class='fa fa-cloud'></i></h2>
+                        <h3>&ndash; falls back to &ndash;</h3>
+                        <h2>Cloud</h2>
+                    </section>
+                    <section>
+<pre><code class='html'>&lt;span class='icon-with-fallback'&gt;
+&lt;span class='icon icon-cloud'
+aria-hidden='true'&gt;&lt;/span&gt;
+&lt;span class='fallback'>Cloud&lt;/span&gt;
+&lt;/span&gt;</code></pre>
+                    </section>
+
+                    <section>
+<pre><code class='css'>.icon-with-fallback .icon { display: none; }
+.supports-iconfont .icon-with-fallback
+.icon { display: inline-block; }
+.supports-iconfont .icon-with-fallback
+.fallback {/* visually hide */}</code></pre>
+                    </section>
+                </section>
+
+
+                <section>
+                    <h2>Summary</h2>
                     <aside class='notes'>
+                        * http://filamentgroup.com/lab/bulletproof_icon_fonts.html
                         * Thoughts: http://ianfeather.co.uk/ten-reasons-we-switched-from-an-icon-font-to-svg/
                         * Browser font adjustments: a little bold, a little light, antialiased, whatever -- not as much control
                         * Positioning can feel a little awkward, absolute, line-height
                         * Fallbacks can be weird
                         * Square peg, round hole and all that
+                        * BUT, especially if you are interspersing icons and text, can work well
+                        * And, supported as well as fonts on the web -- pretty well (need to test)
                     </aside>
-                </section>    
+                </section>
 <!-- SVG -->
 
 <!-- svg vs icon fonts http://filamentgroup.com/lab/bulletproof_icon_fonts.html -->
