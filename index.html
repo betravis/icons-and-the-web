@@ -41,6 +41,11 @@
             font-family: FontAwesome;
             font-style: normal;
         }
+        .reveal section img.plain {
+            background: transparent;
+            border: none;
+            box-shadow: initial;
+        }
         </style>
     </head>
 
@@ -377,7 +382,7 @@
                     <section>
                         <h2>Support</h2>
                         <table>
-                            <th><td></td>
+                            <tr><td></td>
                                 <td>IE</td>
                                 <td>FF</td>
                                 <td>CR</td>
@@ -385,9 +390,9 @@
                                 <td>O</td>
                                 <td>iOS</td>
                                 <td>A</td>
-                            </th>
+                            </tr>
                             <tr><td>ASCII</td>
-                                <td></td>
+                                <td>5</td>
                                 <td>32</td>
                                 <td>37</td>
                                 <td>7</td>
@@ -396,7 +401,7 @@
                                 <td></td>
                             </tr>
                             <tr><td>PUA</td>
-                                <td></td>
+                                <td>9</td>
                                 <td>32</td>
                                 <td>37</td>
                                 <td>7</td>
@@ -405,7 +410,7 @@
                                 <td></td>
                             </tr>
                             <tr><td>Ligatures</td>
-                                <td>(check 10+)</td>
+                                <td>10</td>
                                 <td>32</td>
                                 <td>37</td>
                                 <td>7</td>
@@ -414,6 +419,10 @@
                                 <td></td>
                             </tr>
                         </table>
+                        <aside class='notes'>
+
+                        </aside>
+                    </section>
                 </section>
 
                 <section>
@@ -454,7 +463,6 @@ aria-hidden='true'&gt;&lt;/span&gt;
 &lt;span class='fallback'>Cloud&lt;/span&gt;
 &lt;/span&gt;</code></pre>
                     </section>
-
                     <section>
 <pre><code class='css'>.icon-with-fallback .icon { display: none; }
 .supports-iconfont .icon-with-fallback
@@ -463,7 +471,6 @@ aria-hidden='true'&gt;&lt;/span&gt;
 .fallback {/* visually hide */}</code></pre>
                     </section>
                 </section>
-
 
                 <section>
                     <h2>Summary</h2>
@@ -476,11 +483,55 @@ aria-hidden='true'&gt;&lt;/span&gt;
                         * Square peg, round hole and all that
                         * BUT, especially if you are interspersing icons and text, can work well
                         * And, supported as well as fonts on the web -- pretty well (need to test)
+                        * But it's still pretty hacky
                     </aside>
                 </section>
 <!-- SVG -->
+                <section>
+                    <section>
+                        <h2>SVG</h2>
+                    </section>
+                    <section>
+<pre><code class='svg'>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;svg xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 100 100"&gt;
+    &lt;circle r="50" cx="50" cy="50"
+      fill="#DA727E"/&gt;
+&lt;/svg&gt;</code></pre>
+                        <aside class='notes'>
+                            * Some very quick highlights about SVG
+                            * It is it's own xml-based document format. It's similar to HTML, but slightly different.
+                            * It was designed to describe scalable vector artwork.
+                            * Here we've got a filled circle that is located in the center of a 100x100 grid
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>SVG, now great for icons</h2>
+                        <table>
+                            <tr>
+                                <td>IE</td>
+                                <td>FF</td>
+                                <td>CR</td>
+                                <td>S</td>
+                                <td>O</td>
+                                <td>iOS</td>
+                                <td>A</td>
+                            </tr>
+                            <tr style='text-align: center'>
+                                <td>9+</td>
+                                <td>30+</td>
+                                <td>27+</td>
+                                <td>5.1+</td>
+                                <td>23+</td>
+                                <td>6.1+</td>
+                                <td>4.4+</td>
+                            </tr>
+                        </table>
+                    </section>
+                </section>
 
 <!-- svg vs icon fonts http://filamentgroup.com/lab/bulletproof_icon_fonts.html -->
+<!-- browser icons http://marinad.com.ar/free-flat-browser-logotypes/ -->
             </div>
 
         </div>
@@ -499,11 +550,11 @@ aria-hidden='true'&gt;&lt;/span&gt;
                 center: true,
 
                 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                transition: 'linear', //Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
                 // Parallax scrolling
-                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-                // parallaxBackgroundSize: '2100px 900px',
+                // parallaxBackgroundImage: 'resources/trianglify-red-blue.svg',
+                // parallaxBackgroundSize: '3600px 2100px',
 
                 // Optional libraries used to extend on reveal.js
                 dependencies: [
