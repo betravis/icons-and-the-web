@@ -59,7 +59,7 @@
                 <section>
                     <h1>Icons and the Web</h1>
                     <p>
-                        <i class='icon-github-alt'></i><a href='http://github.com/betravis'>betravis</a> / <i class='icon-twitter'></i><a href="http://twitter.com/bear_travis">bear_travis</a>
+                        <i class='fa fa-github-alt'></i> <a href='http://github.com/betravis'>betravis</a> / <i class='fa fa-twitter'></i> <a href="http://twitter.com/bear_travis">bear_travis</a>
                     </p>
                     <aside class='notes'>
                         * Hello there, I'm Bear Travis
@@ -524,11 +524,57 @@ aria-hidden='true'&gt;&lt;/span&gt;
                                 <td>5.1+</td>
                                 <td>23+</td>
                                 <td>6.1+</td>
-                                <td>4.4+</td>
+                                <td>4.4+</td><!-- 4 according to caniuse.com -->
                             </tr>
                         </table>
                     </section>
                 </section>
+
+                <section>
+                    <section>
+                        <h2>Using it</h2>
+                    </section>
+                    <section>
+<pre><code class='html'>&lt;html&gt;
+  &lt;p&gt;Some text&lt;/p&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 100 100"&gt;
+    &lt;circle r="50" cx="50" cy="50"
+      fill="#DA727E"/&gt;
+  &lt;/svg&gt;
+&lt;/html&gt;</code></pre>
+                        <aside class='notes'>
+                            * You can use it inline, just drop the svg right into your html
+                            * Note that you still have to refer to the svg namespace
+                        </aside>
+                    </section>
+                    <section>
+<pre><code class='css'>p { color: blue; }
+circle { fill: red; }</code></pre>
+<pre><code class='html'>&lt;html&gt;
+  &lt;p&gt;Some text&lt;/p&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 100 100"&gt;
+    &lt;circle r="50" cx="50" cy="50"/&gt;
+  &lt;/svg&gt;
+&lt;/html&gt;</code></pre>
+                    </section>
+                    <section>
+<pre><code class='html'>&lt;img src="circle.svg"&gt;</code></pre>
+<pre><code class='css'>.icon { background: url(circle.svg); }</code></pre>
+                        <aside class='notes'>
+                    </section>
+                </section>
+
+                <section><h2>SVG as a Container</h2></section>
+                <section>
+                    <section><h2>Icon Stacks</h2></section>
+                    <section>
+                        
+                    </section>
+                    <section>
+                    </section>
+
 
 <!-- svg vs icon fonts http://filamentgroup.com/lab/bulletproof_icon_fonts.html -->
 <!-- browser icons http://marinad.com.ar/free-flat-browser-logotypes/ -->
@@ -567,6 +613,18 @@ aria-hidden='true'&gt;&lt;/span&gt;
                 ]
             });
 
+            /* Custom script for cleanup stuff */
+            // window.onload = function() {
+            //     var codes = document.querySelectorAll('code'), code, content;
+            //     for (var i = 0; i < codes.length; i++) {
+            //         code = codes[i];
+            //         content = code.innerHTML;
+            //         content = content.replace(/</g, '&lt;');
+            //         content = content.replace(/>/g, '&gt;');
+            //         content = content.replace(/^\s+/, '');
+            //         content.innerHTML = content;
+            //     }
+            // }
         </script>
 
     </body>
