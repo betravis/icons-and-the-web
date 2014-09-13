@@ -46,6 +46,10 @@
             border: none;
             box-shadow: initial;
         }
+        .reveal section > svg {
+            max-width: 95%;
+            max-height: 95%;
+        }
         </style>
     </head>
 
@@ -535,33 +539,38 @@ aria-hidden='true'&gt;&lt;/span&gt;
                         <h2>Using it</h2>
                     </section>
                     <section>
-<pre><code class='html'>&lt;html&gt;
-  &lt;p&gt;Some text&lt;/p&gt;
-  &lt;svg xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 100 100"&gt;
-    &lt;circle r="50" cx="50" cy="50"
-      fill="#DA727E"/&gt;
-  &lt;/svg&gt;
-&lt;/html&gt;</code></pre>
+                        <pre><code class='html'><!--
+                        <html>
+                          <p>Some text</p>
+                          <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 100 100">
+                            <circle r="50" cx="50" cy="50"
+                              fill="#DA727E">
+                          </svg>
+                        </html>
+                        --></code></pre>
                         <aside class='notes'>
                             * You can use it inline, just drop the svg right into your html
                             * Note that you still have to refer to the svg namespace
                         </aside>
                     </section>
                     <section>
-<pre><code class='css'>p { color: blue; }
-circle { fill: red; }</code></pre>
-<pre><code class='html'>&lt;html&gt;
-  &lt;p&gt;Some text&lt;/p&gt;
-  &lt;svg xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 100 100"&gt;
-    &lt;circle r="50" cx="50" cy="50"/&gt;
-  &lt;/svg&gt;
-&lt;/html&gt;</code></pre>
+                        <pre><code class='css'><!--
+                        p { color: blue; }
+                        circle { fill: red; }--></code></pre>
+                        <pre><code class='html'><!--
+                        <html>
+                          <p>Some text</p>
+                          <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 100 100">
+                            <circle r="50" cx="50" cy="50"/>
+                          </svg>
+                        </html>
+                        --></code></pre>
                     </section>
                     <section>
-<pre><code class='html'>&lt;img src="circle.svg"&gt;</code></pre>
-<pre><code class='css'>.icon { background: url(circle.svg); }</code></pre>
+                        <pre><code class='html'>&lt;img src="circle.svg"&gt;</code></pre>
+                        <pre><code class='css'>.icon { background: url(circle.svg); }</code></pre>
                         <aside class='notes'>
                     </section>
                 </section>
@@ -570,11 +579,25 @@ circle { fill: red; }</code></pre>
                 <section>
                     <section><h2>Icon Stacks</h2></section>
                     <section>
-                        
+                        <div class='ribbon'>
+                            <img src='resources/farm-animals.svg#pig'>
+                            <img src='resources/farm-animals.svg#chicken'>
+                            <img src='resources/farm-animals.svg#fox'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#cow'>
+                        </div>
                     </section>
                     <section>
+                        <img class='plain' src='resources/farm-animals.svg#rabbit'>
                     </section>
+                </section>
 
+                <section><h2>SVG as Library</h2></section>
+                <section>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55'>
+                        <use xlink:href='resources/farm-animals.svg#cow-symbol'/>
+                    </svg>
+                </section>
 
 <!-- svg vs icon fonts http://filamentgroup.com/lab/bulletproof_icon_fonts.html -->
 <!-- browser icons http://marinad.com.ar/free-flat-browser-logotypes/ -->
@@ -607,24 +630,12 @@ circle { fill: red; }</code></pre>
                     { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
                     { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'custom-startup.js' },
                     { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
                     { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
                 ]
             });
-
-            /* Custom script for cleanup stuff */
-            // window.onload = function() {
-            //     var codes = document.querySelectorAll('code'), code, content;
-            //     for (var i = 0; i < codes.length; i++) {
-            //         code = codes[i];
-            //         content = code.innerHTML;
-            //         content = content.replace(/</g, '&lt;');
-            //         content = content.replace(/>/g, '&gt;');
-            //         content = content.replace(/^\s+/, '');
-            //         content.innerHTML = content;
-            //     }
-            // }
         </script>
 
     </body>
