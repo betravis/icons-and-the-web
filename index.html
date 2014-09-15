@@ -46,10 +46,10 @@
             border: none;
             box-shadow: initial;
         }
-        .reveal section > svg {
+        /*.reveal section > svg {
             max-width: 95%;
             max-height: 95%;
-        }
+        }*/
         </style>
     </head>
 
@@ -162,7 +162,9 @@
                         <h2>What is our ideal?</h2>
                     </section>
                     <section>
-                        <pre><code class='html'>&lt;icon&gt;name&lt;/icon&gt;</code></pre>
+                        <pre><code class='html'><!--
+                        <icon>name</icon>
+                        --></code></pre>
                         <aside class='notes'>
                             * The icon is a single, separable element
                             * It has accessible content
@@ -200,17 +202,23 @@
                         </aside>
                     </section>
                     <section>
-                        <pre><code class='html'>&lt;i class='icon-book'&gt;&lt;/i&gt;</code></pre>
+                        <pre><code class='html'><!--
+                        <i class='icon-book'></i>
+                        --></code></pre>
                     </section>
                     <section>
-<pre><code class='css'>i[class^='icon-'] { /* size and position */ }
-.icon-book { background: url('book.png'); }</code></pre>
+                        <pre><code class='css'><!--
+                        i[class^='icon-'] { /* size and position */ }
+                        .icon-book { background: url('book.png'); }
+                        --></code></pre>
                     </section>
                     <section>
                         <h2>But you're loading multiple resources!</h2>
                     </section>
                     <section>
-<pre><code class='css'>.icon-book { background: url(data:image/png;base64,...); }</code></pre>
+                        <pre><code class='css'><!--
+                        .icon-book { background: url(data:image/png;base64,...); }
+                        --></code></pre>
                     </section>
                     <section>
                         <h2>Summary</h2>
@@ -231,8 +239,11 @@
                         <pre><code class='html'>&lt;i class='icon-book'&gt;&lt;/i&gt;</code></pre>
                     </section>
                     <section>
-<pre><code class='css'>i[class^='icon-'] { /* size and position */ }
-.icon-book { background-image: url('spritesheet.png'); background-position: -16px 0; }</code></pre>
+                        <pre><code class='css'><!--
+                        i[class^='icon-'] { /* size and position */ }
+                        .icon-book { background-image: url('spritesheet.png');
+                        background-position: -16px 0; }
+                        --></code></pre>
                     </section>
                     <section>
                         <h2>Summary</h2>
@@ -321,12 +332,14 @@
                         </aside>
                     </section>
                     <section>
-<pre><code class='css'>@font-face {
-    name: icon-font;
-    src: url(icon-font.woff);
-}
-.icon { font-family: icon-font; }
-.icon-cloud:before { content: 'f'; }</code></pre>
+                        <pre><code class='css'><!--
+                        @font-face {
+                            name: icon-font;
+                            src: url(icon-font.woff);
+                        }
+                        .icon { font-family: icon-font; }
+                        .icon-cloud:before { content: 'f'; }
+                        --></code></pre>
                     </section>
                     <section>
                         <h1>Unicode PUA</h1>
@@ -339,12 +352,14 @@
                         <h1> &amp;#xe000; <i class='fa fa-long-arrow-right'></i> <i class='fa fa-cloud'></i></h1>
                     </section>
                     <section>
-<pre><code class='css'>@font-face {
-    name: icon-font;
-    src: url(icon-font.woff);
-}
-.icon { font-family: icon-font; }
-.icon-cloud:before { content: '\e0000'; }</code></pre>
+                        <pre><code class='css'><!--
+                        @font-face {
+                            name: icon-font;
+                            src: url(icon-font.woff);
+                        }
+                        .icon { font-family: icon-font; }
+                        .icon-cloud:before { content: '\e0000'; }
+                        --></code></pre>
                     </section>
                     <section>
                         <img src='resources/pua-system-font.png'>
@@ -376,12 +391,14 @@
                         </aside>
                     </section>
                     <section>
-<pre><code class='css'>.icon {
-    font-family: icon-font;
-    text-rendering: optimizeLegibility;
-    font-feature-settings: 'dlig';
-}
-.icon-cloud:before { content: 'cloud'; }</code></pre>
+                        <pre><code class='css'><!--
+                        .icon {
+                            font-family: icon-font;
+                            text-rendering: optimizeLegibility;
+                            font-feature-settings: 'dlig';
+                        }
+                        .icon-cloud:before { content: 'cloud'; }
+                        --></code></pre>
                     </section>
                     <section>
                         <h2>Support</h2>
@@ -443,14 +460,18 @@
                         <h2>Cloud</h2>
                     </section>
                     <section>
-<pre><code class='html'>&lt;span class='icon icon-cloud'
-aria-hidden='true'></span> Cloud</code></pre>
-<pre><code class='css'>.supports-iconfont .icon:before {
-font-family: iconfont;
-}
-.supports-iconfont .icon-cloud:before {
-content: '\e0000'
-}</code></pre>
+                        <pre><code class='html'><!--
+                        <span class='icon icon-cloud'
+                            aria-hidden='true'></span> Cloud
+                        --></code></pre>
+                        <pre><code class='css'><!--
+                        .supports-iconfont .icon:before {
+                            font-family: iconfont;
+                        }
+                        .supports-iconfont .icon-cloud:before {
+                            content: '\e0000';
+                        }
+                        --></code></pre>
                     </section>
                     <section>
                         <h2>Fallback to text</h2>
@@ -461,18 +482,22 @@ content: '\e0000'
                         <h2>Cloud</h2>
                     </section>
                     <section>
-<pre><code class='html'>&lt;span class='icon-with-fallback'&gt;
-&lt;span class='icon icon-cloud'
-aria-hidden='true'&gt;&lt;/span&gt;
-&lt;span class='fallback'>Cloud&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+                        <pre><code class='html'><!--
+                        <span class='icon-with-fallback'>
+                        <span class='icon icon-cloud'
+                            aria-hidden='true'></span>
+                        <span class='fallback'>Cloud</span>
+                        </span>
+                        --></code></pre>
                     </section>
                     <section>
-<pre><code class='css'>.icon-with-fallback .icon { display: none; }
-.supports-iconfont .icon-with-fallback
-.icon { display: inline-block; }
-.supports-iconfont .icon-with-fallback
-.fallback {/* visually hide */}</code></pre>
+                        <pre><code class='css'><!--
+                        .icon-with-fallback .icon { display: none; }
+                        .supports-iconfont .icon-with-fallback
+                        .icon { display: inline-block; }
+                        .supports-iconfont .icon-with-fallback
+                        .fallback {/* visually hide */}
+                        --></code></pre>
                     </section>
                 </section>
 
@@ -495,31 +520,54 @@ aria-hidden='true'&gt;&lt;/span&gt;
                     <section>
                         <h2>SVG</h2>
                     </section>
+
                     <section>
-<pre><code class='svg'>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;svg xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 100 100"&gt;
-    &lt;circle r="50" cx="50" cy="50"
-      fill="#DA727E"/&gt;
-&lt;/svg&gt;</code></pre>
+                        <div class='ribbon ascent'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                        </div>
                         <aside class='notes'>
-                            * Some very quick highlights about SVG
-                            * It is it's own xml-based document format. It's similar to HTML, but slightly different.
-                            * It was designed to describe scalable vector artwork.
-                            * Here we've got a filled circle that is located in the center of a 100x100 grid
+                            * SVG, scalable vector graphics
+                            * Define paths that will scale, so they'll look great at any size
                         </aside>
                     </section>
                     <section>
-                        <h2>SVG, now great for icons</h2>
-                        <table>
-                            <tr>
-                                <td>IE</td>
-                                <td>FF</td>
-                                <td>CR</td>
-                                <td>S</td>
-                                <td>O</td>
-                                <td>iOS</td>
-                                <td>A</td>
+                        <pre><code class='svg'><!--
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 100 100">
+                            <path fill="#DA727E" d="&hellip;"/>
+                        </svg>
+                        --></code></pre>
+                        <aside class='notes'>
+                            * Some very quick highlights about SVG
+                            * It is its own xml-based document format. It's similar to HTML, but slightly different.
+                            * It was designed to describe scalable vector artwork.
+                            * Because it has its own format, there are a couple interesting things you can do with it, which we'll get to in a second.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Support</h2>
+                        <table class='support'><!--
+                            {
+                                "ie": "9+",
+                                "ff": "30+",
+                                "cr": "27+",
+                                "s": "5.1+",
+                                "o": "23+",
+                                "ios": "6.1+",
+                                "a": "4.4+"
+                            }
+                        --></table>
+                            <!--<tr>
+                                <td><img src='resources/internet-explorer.png'></td>
+                                <td><img src='resources/firefox.png'></td>
+                                <td><img src='resources/chrome.png'></td>
+                                <td><img src='resources/safari.png'></td>
+                                <td><img src='resources/opera.png'></td>
+                                <td><img src='resources/mobile-browsers.svg#ios'></td>
+                                <td><img src='resources/mobile-browsers.svg#android'></td>
                             </tr>
                             <tr style='text-align: center'>
                                 <td>9+</td>
@@ -530,7 +578,10 @@ aria-hidden='true'&gt;&lt;/span&gt;
                                 <td>6.1+</td>
                                 <td>4.4+</td><!-- 4 according to caniuse.com -->
                             </tr>
-                        </table>
+                        <aside class='notes'>
+                            * One of the reasons we're starting to see more excitement around SVG is that browser support is reaching critical mass
+                            * Older browsers that don't support it are less prominent today, and supporting browsers represent a good section of the market
+                        </aside>
                     </section>
                 </section>
 
@@ -569,8 +620,12 @@ aria-hidden='true'&gt;&lt;/span&gt;
                         --></code></pre>
                     </section>
                     <section>
-                        <pre><code class='html'>&lt;img src="circle.svg"&gt;</code></pre>
-                        <pre><code class='css'>.icon { background: url(circle.svg); }</code></pre>
+                        <pre><code class='html'><!--
+                        <img src="circle.svg">
+                        --></code></pre>
+                        <pre><code class='css'><!--
+                        .icon { background: url(circle.svg); }
+                        --></code></pre>
                         <aside class='notes'>
                     </section>
                 </section>
@@ -580,15 +635,28 @@ aria-hidden='true'&gt;&lt;/span&gt;
                     <section><h2>Icon Stacks</h2></section>
                     <section>
                         <div class='ribbon'>
-                            <img src='resources/farm-animals.svg#pig'>
-                            <img src='resources/farm-animals.svg#chicken'>
-                            <img src='resources/farm-animals.svg#fox'>
-                            <img src='resources/farm-animals.svg#rabbit'>
-                            <img src='resources/farm-animals.svg#cow'>
+                            <img src='resources/farm-animals.svg#pig'> +
+                            <img src='resources/farm-animals.svg#chicken'> +
+                            <img src='resources/farm-animals.svg#fox'> +
+                            <img src='resources/farm-animals.svg#rabbit'> +
+                            <img src='resources/farm-animals.svg#cow'> =
+                            <img src='resources/farm-animals.svg#composite'>
                         </div>
                     </section>
                     <section>
+                        <img class='plain' src='resources/farm-animals.svg#pig'>
+                    </section>
+                    <section>
+                        <img class='plain' src='resources/farm-animals.svg#chicken'>
+                    </section>
+                    <section>
+                        <img class='plain' src='resources/farm-animals.svg#fox'>
+                    </section>
+                    <section>
                         <img class='plain' src='resources/farm-animals.svg#rabbit'>
+                    </section>
+                    <section>
+                        <img class='plain' src='resources/farm-animals.svg#cow'>
                     </section>
                 </section>
 
@@ -599,6 +667,12 @@ aria-hidden='true'&gt;&lt;/span&gt;
                     </svg>
                 </section>
 
+                <section>
+                    <h2>Credits</h2>
+                    <ul>
+                        <li>animals by <a href='http://freepik.com'>freepik</a></li>
+                    </ul>
+                </section>
 <!-- svg vs icon fonts http://filamentgroup.com/lab/bulletproof_icon_fonts.html -->
 <!-- browser icons http://marinad.com.ar/free-flat-browser-logotypes/ -->
             </div>

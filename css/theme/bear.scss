@@ -101,28 +101,32 @@ $selectionBackgroundColor: #134674;
 
 .reveal .highlight { color: $blue; }
 
-.ribbon-small, .ribbon, .ribbon-big { width: 100%; }
-
-.ribbon-small, .ribbon, .ribbon-big {
-    > img, > object {
+.reveal div.ribbon {
+    > img {
         vertical-align: middle;
-        height:64px;
-        background: none !important;
-        border: none !important;
-        box-shadow: none !important;
-        margin: 0 !important;
+        height:128px;
+        background: none;
+        border: none;
+        box-shadow: none;
+        margin: 0;
     }
-}
-
-.ribbon {
-    > img, > object {
-        height: 128px;
+    &.small > img {
+        height: 64px;
     }
-}
-
-.ribbon-big {
-    > img, > object {
+    &.big > img {
         height: 256px;
+    }
+    &.ascent > img {
+        vertical-align: baseline;
+        &:nth-child(1) {
+            height: 64px;
+        }
+        &:nth-child(2) {
+            height: 128px;
+        }
+        &:nth-child(3) {
+            height: 256px;
+        }
     }
 }
 
@@ -278,4 +282,27 @@ $carpetRed: rgb(230, 63, 79);
 
 .reveal .red {
     background-color: #b2382d;
+}
+
+table.support {
+    display: inline-block;
+    tr {
+        display: inline-flex;
+        align-items: baseline;
+    }
+    td {
+        display: block;
+        width: 96px;
+        flex: none;
+        text-align: center;
+        padding: 0 0.5em 0.5em 0;
+        img {
+            border: none;
+            margin: 0;
+            box-shadow: none;
+            background: none;
+            width: 100%;
+            vertical-align: bottom;
+        }
+    }
 }
