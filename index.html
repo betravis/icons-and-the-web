@@ -54,6 +54,21 @@
         .reveal .big {
             font-size: 1.6em;
         }
+        html.topic body {
+            background-image: url(resources/trianglify-red-blue.svg);
+            background-size: 1800px 1050px;
+            background-color: #333;
+            background-blend-mode: multiply;
+        }
+        html.topic h1, html.topic h2 {
+            font-family: 'Homestead', 'Adobe Clean', 'Helvetica Neue', sans-serif;
+        }
+        html.about body {
+            background-image: url(resources/web-engine-team.jpg);
+            background-size: cover;
+            background-color: #333;
+            background-blend-mode: multiply;
+        }
         </style>
     </head>
 
@@ -63,9 +78,10 @@
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
+
 <!-- INTRODUCTION -->
-                <section>
-                    <h1>Icons and the Web</h1>
+                <section data-state='topic'>
+                    <h1>Icons and the&nbsp;Web</h1>
                     <p>
                         <i class='fa fa-github-alt'></i> <a href='http://github.com/betravis'>betravis</a> / <i class='fa fa-twitter'></i> <a href="http://twitter.com/bear_travis">bear_travis</a>
                     </p>
@@ -77,9 +93,8 @@
                     </aside>
                 </section>
 
-                <section>
+                <section data-state='about'>
                     <h2>About Me</h2>
-                    <img src='resources/web-engine-team.jpg' alt='Web Engine Team' />
                     <aside class='notes'>
                         * I work on the Web Platform team at Adobe
                         * Our job is to help make the web a better creative medium
@@ -88,22 +103,25 @@
 
 <!-- ICON DESIGN -->
                 <section>
-                    <section>
+                    <section data-state='topic'>
                         <h2>What is an Icon?</h2>
-                        <img class='plain' src='resources/cursor-icons.svg'>
-                        <!-- http://dailyexhaust.com/2008/09/hand-arrow-icons.html -->
                         <aside class='notes'>
                             * Let's start out by laying some groundwork, what exactly is an icon?
                         </aside>
                     </section>
                     <section>
-                        <p class='big'>Icons are visual metaphors that help users navigate an interface.</p>
+                        <figure>
+                            <img class='plain' src='resources/cursor-icons.svg'>
+                            <!-- http://dailyexhaust.com/2008/09/hand-arrow-icons.html -->
+                            <figcaption>Icons are visual metaphors that help users navigate an interface.</figcaption>
+                        </figure>
                         <aside class='notes'>
                             * Let's start with a working definition.
                             * Icons are visual representations of an idea, that help users navigate a graphical interface.
                             * Paraphrasing the parts I like from Wikipedia
                             * If we go back to the first slide, these cursors help the user maintain the map between their physical mouse location and their virtual screen location.
                             * A kind of "you are here" idea.
+                            * Think of them as signposts.
                         </aside>
                     </section>
                 </section>
@@ -115,6 +133,12 @@
                             * But it might be a little more helpful to talk about what problems icons solve, and how they are useful.
                             * We're going to step back into the history-mobile.
                             Q: Lead in with the Vannevar Bush Memex?
+                    </section>
+                    <section>
+                        <figure>
+                            <img class='plain' src='resources/memex.jpg'>
+                            <figcaption>1945 Vannevar Bush Memex</figcaption>
+                        </figure>
                     </section>
                     <section>
                         <figure>
@@ -162,6 +186,11 @@
                             * We see icons on the top to indicate signal strength, wifi, battery power.
                             * Icons are everywhere!
                             * Icons work best when they are quickly understood -- you need to have a reason to take up all that visual real estate, especially when you are working with small screens.
+                            * Context is part of it -- top left tells us signal strength, probably less understandable in a different context
+                            * Top right tells us battery power
+                            * Imagine if these were both just percentages, maybe with "Signal" and "Battery Power" instead
+                            * Same information, but this is packaged in less space and less visually cluttered
+                            * Smaller screens are also probably part of why we are seeing so many of these
                         </aside>
                     </section>
                 </section>
@@ -169,32 +198,53 @@
                 <section>
                     <section>
                         <p class='big'>Icons can help users navigate an&nbsp;interface</p>
+                        <aside class='notes'>So to summarize</aside>
                     </section>
                     <section>
                         <p class='big'>but they can be confusing if not readily&nbsp;understood.</p>
+                        <aside class='notes'>
+                            * You can always read text and try to puzzle out the exact meaning
+                            * But if you don't recognize an icon, what fallback do you have?
+                        </aside>
+                    </section>
+                    <section>
+                        <figure>
+                            <img class='plain' src='resources/mac-os-8.png'>
+                            <figcaption>Mac OS 8</figcaption>
+                            <!-- http://www.guidebookgallery.org/screenshots/macos80 -->
+                            <aside class='notes'>
+                                * Icons can wind up adding visual noise rather than helpful signposts
+                                * Control panels seem to be a pretty good stress test
+                                * There are a couple things going wrong here
+                                * First, there's just too much going on.
+                                * Icons help identify key pieces of information. Everything here is important. So nothing is.
+                                * But you can also see that they tried to make all of the icons uniform
+                                * They are all gray squares with little sliders
+                                * Which makes them even more indistinguishable
+                                * The only thing these icons establish is a visual rhythm -- you're better off just reading the text
+                            </aside>
+                        </figure>
                     </section>
                 </section>
 
                 <section>
-                    <p><small>image of iOS</small></p>
-                    <aside class='notes'>
-                        * Context is part of it -- top left tells us signal strength, probably less understandable in a different context
-                        * Top right tells us battery power
-                        * Imagine if these were both just percentages, maybe with "Signal" and "Battery Power" instead
-                        * Same information, but this is packaged in less space and less visually cluttered
-                        * Smaller screens are also probably part of why we are seeing so many of these
-                    </aside>
+                    <p class='big'>Icons should help guide a user.</p>
                 </section>
 
 <!-- SCREEN ICONS -->
                 <section>
-                    <section>
+                    <section data-state='topic'>
                         <h2>Icons on Screens</h2>
                         <p><small>image of pixellated book icon</small></p>
                         <aside class='notes'>
                             * Icons are small enough that you have to start thinking about actual pixels
                             * Always a danger if you design and display at a different size
                         </aside>
+                    </section>
+                    <section>
+                        <h2>The challenge</h2>
+                        <p class='big'>Icons have to communicate an idea clearly</p>
+                        <p class='big'>in a limited amount of visual real estate.</p>
                     </section>
                     <section>
                         <p><small>image of 16->32, 32->16, 16->24, 32->24</small></p>
@@ -627,24 +677,6 @@
                                 "a": "4.4+"
                             }
                         --></table>
-                            <!--<tr>
-                                <td><img src='resources/internet-explorer.png'></td>
-                                <td><img src='resources/firefox.png'></td>
-                                <td><img src='resources/chrome.png'></td>
-                                <td><img src='resources/safari.png'></td>
-                                <td><img src='resources/opera.png'></td>
-                                <td><img src='resources/mobile-browsers.svg#ios'></td>
-                                <td><img src='resources/mobile-browsers.svg#android'></td>
-                            </tr>
-                            <tr style='text-align: center'>
-                                <td>9+</td>
-                                <td>30+</td>
-                                <td>27+</td>
-                                <td>5.1+</td>
-                                <td>23+</td>
-                                <td>6.1+</td>
-                                <td>4.4+</td><!-- 4 according to caniuse.com -->
-                            </tr>
                         <aside class='notes'>
                             * One of the reasons we're starting to see more excitement around SVG is that browser support is reaching critical mass
                             * Older browsers that don't support it are less prominent today, and supporting browsers represent a good section of the market
@@ -764,7 +796,7 @@
 
                 // Parallax scrolling
                 // parallaxBackgroundImage: 'resources/trianglify-red-blue.svg',
-                // parallaxBackgroundSize: '3600px 2100px',
+                // parallaxBackgroundSize: '1800px 1050px',
 
                 // Optional libraries used to extend on reveal.js
                 dependencies: [
