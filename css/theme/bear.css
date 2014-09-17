@@ -4,6 +4,9 @@
  */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+svg use {
+  fill: #e4dfd9; }
+
 .inverse .reveal {
   color: #242729; }
   .inverse .reveal h1, .inverse .reveal h2, .inverse .reveal h3, .inverse .reveal h4, .inverse .reveal h5, .inverse .reveal h6 {
@@ -57,7 +60,7 @@ body {
   color: #e4dfd9; }
 
 ::selection {
-  color: white;
+  color: #fff;
   background: #134674;
   text-shadow: none; }
 
@@ -369,3 +372,5 @@ table.support {
       background: none;
       width: 100%;
       vertical-align: bottom; }
+
+/*# sourceMappingURL=bear.css.map */

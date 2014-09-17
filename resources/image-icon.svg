@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<style type='text/css'><![CDATA[
+path, circle { color: inherit; fill: inherit; }
+]]></style>
+<defs>
+    <symbol id='image-symbol' viewBox='0 0 20 20'>
+        <path d="M16,13c0,0-2.6-3-3-3c-0.2,0-2,2-2,2c-0.9-1-2.4-4-3-4c-0.6,0-2.6,3.1-4,5H16z"/>
+        <circle cx="13.5" cy="6.5" r="1.5"/>
+        <path d="M17,2L3,2C1.5,2,1,2.5,1,4v11c0,1.5,0.5,2,2,2h14c1.5,0,2-0.5,2-2V4C19,2.5,18.5,2,17,2z M17,15H3V4h14V15z"/>
+    </symbol>
+</defs>
+</svg>

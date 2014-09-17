@@ -5,8 +5,8 @@
 
 
 // Default mixins and settings -----------------
-@import "reveal.js/css/theme/template/mixins";
-@import "reveal.js/css/theme/template/settings";
+@import "../../reveal.js/css/theme/template/mixins";
+@import "../../reveal.js/css/theme/template/settings";
 // ---------------------------------------------
 
 // Include theme-specific fonts
@@ -51,6 +51,10 @@ $linkColor: $blue;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: #134674;
 
+svg use {
+    fill: $mainColor;
+}
+
 .inverse .reveal {
     color: $backgroundColor;
     h1, h2, h3, h4, h5, h6 { color: $backgroundColor; }
@@ -93,7 +97,7 @@ $selectionBackgroundColor: #134674;
 .reveal section.align-right { text-align: right; }
 
 // Theme template ------------------------------
-@import "reveal.js/css/theme/template/theme";
+@import "../../reveal.js/css/theme/template/theme";
 // ---------------------------------------------
 
 /* could insert a media query here to adjust font size / slide-size for larger screens */
