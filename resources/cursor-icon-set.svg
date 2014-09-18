@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 24" xml:space="preserve">
+    <style type="text/css"><![CDATA[
+        .g58 { opacity: 0.655; }
+        .g64 { opacity: 0.608; }
+        .g70 { opacity: 0.561; }
+        .g7c { opacity: 0.514; }
+        .g88 { opacity: 0.467; }
+        .g94 { opacity: 0.420; }
+        .g9f { opacity: 0.376; }
+        .gab { opacity: 0.329; }
+        .gb7 { opacity: 0.282; }
+        .gc3 { opacity: 0.235; }
+        .gcf { opacity: 0.188; }
+        .gdb { opacity: 0.141; }
+        .ge7 { opacity: 0.094; }
+        .gf3 { opacity: 0.047; }
+        /* la! an icon stack! */
+        g { display: none; }
+        g:target { display: block; }
+    ]]></style>
+     <defs>
+         <symbol id='white-arrow-shadow' viewBox="0 0 16 24">
+            <path class="g58" d="M5,15h1v1H5V15z"/>
+            <path class="g64" d="M9,14h1v1H9V14z"/>
+            <path class="g70" d="M10,14h1v1h-1V14z"/>
+            <path class="g7c" d="M11,14h1v1h-1V14z"/>
+            <path class="g7c" d="M3,17h1v1H3V17z"/>
+            <path class="g7c" d="M4,16h1v1H4V16z"/>
+            <path class="g88" d="M10,19h1v1h-1V19z"/>
+            <path class="g88" d="M6,17h1v1H6V17z"/>
+            <path class="g88" d="M7,19h1v1H7V19z"/>
+            <path class="g88" d="M8,20h2v1H8V20z"/>
+            <path class="g94" d="M5,16h1v1H5V16z"/>
+            <path class="gab" d="M12,14h1v1h-1V14z"/>
+            <path class="gab" d="M2,18h1v1H2V18z"/>
+            <path class="gb7" d="M6,18h1v1H6V18z"/>
+            <path class="gc3" d="M10,15h1v1h-1V15z"/>
+            <path class="gc3" d="M10,20h1v1h-1V20z"/>
+            <path class="gc3" d="M3,18h1v1H3V18z"/>
+            <path class="gc3" d="M4,17h1v1H4V17z"/>
+            <path class="gc3" d="M7,20h1v1H7V20z"/>
+            <path class="gcf" d="M1,5h1v13H1V5z"/>
+            <path class="gcf" d="M11,15h1v1h-1V15z"/>
+            <path class="gcf" d="M5,17h1v1H5V17z"/>
+            <path class="gdb" d="M1,18h1v1H1V18z"/>
+            <path class="gdb" d="M1,4h1v1H1V4z"/>
+            <path class="gdb" d="M10,16h1v1h-1V16z"/>
+            <path class="gdb" d="M11,18h1v2h-1V18z"/>
+            <path class="gdb" d="M12,15h1v1h-1V15z"/>
+            <path class="gdb" d="M6,19h1v1H6V19z"/>
+            <path class="gdb" d="M8,21h2v1H8V21z"/>
+            <path class="ge7" d="M13,14h1v1h-1V14z"/>
+            <path class="ge7" d="M2,19h1v1H2V19z"/>
+            <path class="gf3" d="M1,19h1v1H1V19z"/>
+            <path class="gf3" d="M1,3h1v1H1V3z"/>
+            <path class="gf3" d="M10,10h1v1h-1V10z"/>
+            <path class="gf3" d="M10,21h1v1h-1V21z"/>
+            <path class="gf3" d="M11,11h1v1h-1V11z"/>
+            <path class="gf3" d="M11,17h1v1h-1V17z"/>
+            <path class="gf3" d="M11,20h1v1h-1V20z"/>
+            <path class="gf3" d="M12,12h1v1h-1V12z"/>
+            <path class="gf3" d="M13,13h1v1h-1V13z"/>
+            <path class="gf3" d="M13,15h1v1h-1V15z"/>
+            <path class="gf3" d="M3,19h1v1H3V19z"/>
+            <path class="gf3" d="M3,3h1v1H3V3z"/>
+            <path class="gf3" d="M4,18h2v1H4V18z"/>
+            <path class="gf3" d="M4,4h1v1H4V4z"/>
+            <path class="gf3" d="M5,5h1v1H5V5z"/>
+            <path class="gf3" d="M6,20h1v1H6V20z"/>
+            <path class="gf3" d="M6,6h1v1H6V6z"/>
+            <path class="gf3" d="M7,21h1v1H7V21z"/>
+            <path class="gf3" d="M7,7h1v1H7V7z"/>
+            <path class="gf3" d="M8,8h1v1H8V8z"/>
+            <path class="gf3" d="M9,9h1v1H9V9z"/>
+        </symbol>
+        <symbol id="white-arrow-main" viewBox="0 0 16 24">
+            <polygon points="13,14 13,13 12,13 12,12 11,12 11,11 10,11 10,10 9,10 9,9 8,9 8,8 7,8 7,7 6,7 6,6 5,6 5,5 4,5 4,4 3,4 3,3 
+                2,3 2,18 3,18 3,17 4,17 4,16 5,16 5,15 6,15 6,17 7,17 7,19 8,19 8,20 10,20 10,19 11,19 11,17 10,17 10,15 9,15 9,14          "/>
+            <path fill="#FFFFFF" d="M3,5h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1H8v2h1v2h1v2H8v-2H7v-2H6v-1H5v1H4v1H3V5z"/>
+        </symbol>
+        <symbol id="hand-shadow" viewBox="0 0 16 24">
+            <path class="g58" d="M11,19h1v1h-1V19z"/>
+            <path class="g70" d="M7,20h3v1H7V20z"/>
+            <path class="g7c" d="M2,14h1v1H2V14z"/>
+            <path class="g7c" d="M4,17h1v1H4V17z"/>
+            <path class="g7c" d="M5,18h1v1H5V18z"/>
+            <path class="g88" d="M1,13h1v1H1V13z"/>
+            <path class="g88" d="M10,20h1v1h-1V20z"/>
+            <path class="g88" d="M12,20h1v1h-1V20z"/>
+            <path class="g88" d="M14,17h1v1h-1V17z"/>
+            <path class="g88" d="M15,15h1v1h-1V15z"/>
+            <path class="g88" d="M3,16h1v1H3V16z"/>
+            <path class="g94" d="M13,20h1v1h-1V20z"/>
+            <path class="g94" d="M6,20h1v1H6V20z"/>
+            <path class="g9f" d="M11,20h1v1h-1V20z"/>
+            <path class="gb7" d="M14,18h1v1h-1V18z"/>
+            <path class="gb7" d="M15,16h1v1h-1V16z"/>
+            <path class="gb7" d="M2,15h1v1H2V15z"/>
+            <path class="gb7" d="M5,19h1v1H5V19z"/>
+            <path class="gc3" d="M1,14h1v1H1V14z"/>
+            <path class="gc3" d="M3,17h1v1H3V17z"/>
+            <path class="gc3" d="M4,10h1v1H4V10z"/>
+            <path class="gc3" d="M4,18h1v1H4V18z"/>
+            <path class="gcf" d="M14,19h1v1h-1V19z"/>
+            <path class="gcf" d="M16,12h1v3h-1V12z"/>
+            <path class="gcf" d="M4,7h1v3H4V7z"/>
+            <path class="gcf" d="M7,21h3v1H7V21z"/>
+            <path class="gcf" d="M9,7h1v1H9V7z"/>
+            <path class="gdb" d="M0,12h1v2H0V12z"/>
+            <path class="gdb" d="M10,21h1v1h-1V21z"/>
+            <path class="gdb" d="M12,21h2v1h-2V21z"/>
+            <path class="gdb" d="M14,20h1v1h-1V20z"/>
+            <path class="gdb" d="M15,17h1v1h-1V17z"/>
+            <path class="gdb" d="M16,11h1v1h-1V11z"/>
+            <path class="gdb" d="M16,15h1v1h-1V15z"/>
+            <path class="gdb" d="M2,16h1v1H2V16z"/>
+            <path class="gdb" d="M4,6h1v1H4V6z"/>
+            <path class="gdb" d="M5,20h1v1H5V20z"/>
+            <path class="gdb" d="M6,21h1v1H6V21z"/>
+            <path class="gdb" d="M9,6h1v1H9V6z"/>
+            <path class="ge7" d="M11,21h1v1h-1V21z"/>
+            <path class="gf3" d="M0,11h1v1H0V11z"/>
+            <path class="gf3" d="M0,14h1v1H0V14z"/>
+            <path class="gf3" d="M1,10h1v1H1V10z"/>
+            <path class="gf3" d="M1,15h1v1H1V15z"/>
+            <path class="gf3" d="M13,8h1v1h-1V8z"/>
+            <path class="gf3" d="M14,21h1v1h-1V21z"/>
+            <path class="gf3" d="M15,18h1v1h-1V18z"/>
+            <path class="gf3" d="M15,9h1v1h-1V9z"/>
+            <path class="gf3" d="M16,10h1v1h-1V10z"/>
+            <path class="gf3" d="M16,16h1v1h-1V16z"/>
+            <path class="gf3" d="M2,17h1v1H2V17z"/>
+            <path class="gf3" d="M3,18h1v1H3V18z"/>
+            <path class="gf3" d="M4,19h1v1H4V19z"/>
+            <path class="gf3" d="M4,5h1v1H4V5z"/>
+            <path class="gf3" d="M5,21h1v1H5V21z"/>
+            <path class="gf3" d="M5,4h1v1H5V4z"/>
+            <path class="gf3" d="M8,4h1v1H8V4z"/>
+            <path class="gf3" d="M9,5h1v1H9V5z"/>
+        </symbol>
+        <symbol id="hand-main" viewBox="0 0 16 24">
+            <polygon points="15,10 15,9 13,9 13,8 9,8 9,5 8,5 8,4 6,4 6,5 5,5 5,11 4,11 4,10 2,10 2,11 1,11 1,13 2,13 2,14 3,14 3,16 4,16 4,17 5,17 5,18 6,18 6,20 11,20 11,19 12,19 12,20 14,20 14,17 15,17 15,15 16,15 16,10"/>
+            <path fill="#FFFFFF" d="M14,10v1h-1V9h-1v2h-1V9H9v2H8V5H6v9H5v-2H4v-1H2v2h1v1h1v2h1v1h1v1h1v1h4v-1h1v1h1v-2h-1v-4h1v4h1v-2h1v-5H14z M9,17H8v-4h1V17z M11,17h-1v-4h1V17z"/>
+        </symbol>
+        <symbol id="black-arrow-shadow" viewBox="0 0 16 24">
+            <path class="g58" d="M5,15h1v1H5V15z"/>
+            <path class="g64" d="M9,14h1v1H9V14z"/>
+            <path class="g70" d="M10,14h1v1h-1V14z"/>
+            <path class="g7c" d="M11,14h1v1h-1V14z"/>
+            <path class="g7c" d="M3,17h1v1H3V17z"/>
+            <path class="g7c" d="M4,16h1v1H4V16z"/>
+            <path class="g88" d="M10,19h1v1h-1V19z"/>
+            <path class="g88" d="M6,17h1v1H6V17z"/>
+            <path class="g88" d="M7,19h1v1H7V19z"/>
+            <path class="g88" d="M8,20h2v1H8V20z"/>
+            <path class="g94" d="M5,16h1v1H5V16z"/>
+            <path class="gab" d="M12,14h1v1h-1V14z"/>
+            <path class="gab" d="M2,18h1v1H2V18z"/>
+            <path class="gb7" d="M6,18h1v1H6V18z"/>
+            <path class="gc3" d="M10,15h1v1h-1V15z"/>
+            <path class="gc3" d="M10,20h1v1h-1V20z"/>
+            <path class="gc3" d="M3,18h1v1H3V18z"/>
+            <path class="gc3" d="M4,17h1v1H4V17z"/>
+            <path class="gc3" d="M7,20h1v1H7V20z"/>
+            <path class="gcf" d="M1,5h1v13H1V5z"/>
+            <path class="gcf" d="M11,15h1v1h-1V15z"/>
+            <path class="gcf" d="M5,17h1v1H5V17z"/>
+            <path class="gdb" d="M1,18h1v1H1V18z"/>
+            <path class="gdb" d="M1,4h1v1H1V4z"/>
+            <path class="gdb" d="M10,16h1v1h-1V16z"/>
+            <path class="gdb" d="M11,18h1v2h-1V18z"/>
+            <path class="gdb" d="M12,15h1v1h-1V15z"/>
+            <path class="gdb" d="M6,19h1v1H6V19z"/>
+            <path class="gdb" d="M8,21h2v1H8V21z"/>
+            <path class="ge7" d="M13,14h1v1h-1V14z"/>
+            <path class="ge7" d="M2,19h1v1H2V19z"/>
+            <path class="gf3" d="M1,19h1v1H1V19z"/>
+            <path class="gf3" d="M1,3h1v1H1V3z"/>
+            <path class="gf3" d="M10,10h1v1h-1V10z"/>
+            <path class="gf3" d="M10,21h1v1h-1V21z"/>
+            <path class="gf3" d="M11,11h1v1h-1V11z"/>
+            <path class="gf3" d="M11,17h1v1h-1V17z"/>
+            <path class="gf3" d="M11,20h1v1h-1V20z"/>
+            <path class="gf3" d="M12,12h1v1h-1V12z"/>
+            <path class="gf3" d="M13,13h1v1h-1V13z"/>
+            <path class="gf3" d="M13,15h1v1h-1V15z"/>
+            <path class="gf3" d="M3,19h1v1H3V19z"/>
+            <path class="gf3" d="M3,3h1v1H3V3z"/>
+            <path class="gf3" d="M4,18h2v1H4V18z"/>
+            <path class="gf3" d="M4,4h1v1H4V4z"/>
+            <path class="gf3" d="M5,5h1v1H5V5z"/>
+            <path class="gf3" d="M6,20h1v1H6V20z"/>
+            <path class="gf3" d="M6,6h1v1H6V6z"/>
+            <path class="gf3" d="M7,21h1v1H7V21z"/>
+            <path class="gf3" d="M7,7h1v1H7V7z"/>
+            <path class="gf3" d="M8,8h1v1H8V8z"/>
+            <path class="gf3" d="M9,9h1v1H9V9z"/>
+        </symbol>
+        <symbol id="black-arrow-main" viewBox="0 0 16 24">
+            <polygon fill="#FFFFFF" points="13,14 13,13 12,13 12,12 11,12 11,11 10,11 10,10 9,10 9,9 8,9 8,8 7,8 7,7 6,7 6,6 5,6 5,5 4,5 4,4 3,4 3,3 2,3 2,18 3,18 3,17 4,17 4,16 5,16 5,15 6,15 6,17 7,17 7,19 8,19 8,20 10,20 10,19 11,19 11,17 10,17 10,15 9,15 9,14"/>
+            <path d="M3,5h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1H8v2h1v2h1v2H8v-2H7v-2H6v-1H5v1H4v1H3V5z"/>
+        </symbol>
+        <symbol id="vector-black-arrow-symbol" viewBox="0 0 16 24">
+            <polygon points="13,16 1,4 1,21 4.33,17.67 7,23.01 11,21 8.5,16" opacity="0.33"/>
+            <polygon fill="#FFFFFF" points="14,14 2,2 2,19 5.33,15.67 8,21 12,19 9.5,14"/>
+            <polygon points="7.88,13 9.5,13 11.59,13 3,4.41 3,16.59 4.63,14.96 5.61,13.98 6.23,15.22 8.45,19.67 10.66,18.55 8.61,14.45"/>
+        </symbol>
+    </defs>
+    <g id="hand">
+        <use xlink:href="#hand-shadow" />
+        <use xlink:href="#hand-main" />
+    </g>
+
+    <g id="black-arrow">
+        <use xlink:href="#black-arrow-shadow" />
+        <use xlink:href="#black-arrow-main" />
+    </g>
+
+    <g id="white-arrow">
+        <use xlink:href="#white-arrow-shadow" />
+        <use xlink:href="#white-arrow-main" />
+    </g>
+
+    <g id="vector-arrow">
+        <use xlink:href="#vector-black-arrow-symbol" />
+    </g>
+</svg>
