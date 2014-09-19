@@ -385,7 +385,6 @@
                     <section>
                         <p>High resolution displays make these issues less visible.</p>
                     </section>
-
                 </section>
 
                 <section>
@@ -401,12 +400,24 @@
                             <img class='plain' src='resources/iconic-responsive.png'>
                             <figcaption>Microphone from Iconic</figcaption>
                         </figure>
+                        <aside class='notes'>
+                            * Here we can see the microphone icon from the set Iconic.
+                            * They're trying to create general-use icons that look excellent at any size.
+                            * What you can see them doing is thinking about the amount of detail you can have in an icon at any given size.
+                            * You probably won't have the time to design all of these, or even use all of these
+                            * But, it is important to try to understand how your icons will be used. There is a big difference between an icon used at 25, 50, or 100 pixels.
+                        </aside>
                     </section>
                 </section>
 
 <!-- ICON DELIVERY -->
-                <section>
-                    <h2>Icon Delivery</h2>
+                <section data-state='topic'>
+                    <section>
+                        <h2>Icon Delivery</h2>
+                    </section>
+                    <section>
+                        <h2>How do we actually use them?</h2>
+                    </section>
                 </section>
 
                 <section>
@@ -414,8 +425,24 @@
                         <h2>What is our ideal?</h2>
                     </section>
                     <section>
+                        <h2>Image-like</h2>
                         <pre><code class='html'><!--
-                        <icon>name</icon>
+                            <icon set='resources/social.icons'
+                                  name='twitter'
+                                  alt='twitter' />
+                        --></pre></code>
+                    </section>
+                    <section>
+                        <h2>Font-like</h2>
+                        <pre><code class='css'><!--
+                        @icon-set {
+                            src: url('resources/social.icons');
+                            name: 'SocialSet';
+                        }
+                        icon { icon-set: 'SocialSet'; }
+                        --></code></pre>
+                        <pre><code class='html'><!--
+                        <icon>Twitter</icon>
                         --></code></pre>
                         <aside class='notes'>
                             * The icon is a single, separable element
@@ -424,7 +451,22 @@
                         </aside>
                     </section>
                     <section>
-                        <h2>Performance</h2>
+                        <h2>Icons should be</h2>
+                    </section>
+                    <section>
+                        <h2>Packagable</h2>
+                    </section>
+                    <section>
+                        <h2>Stylable</h2>
+                    </section>
+                    <section>
+                        <h2>Scalable</h2>
+                    </section>
+                    <section>
+                        <h2>Accessible</h2>
+                    </section>
+                    <section>
+                        <h2>Performant</h2>
                         <aside class='notes'>
                             * Should have minimal footprint
                             * Preferable to load only what you need, in one resource request
