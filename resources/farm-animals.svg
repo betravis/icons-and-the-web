@@ -5,10 +5,18 @@
         <style type='text/css'><![CDATA[
             g { display: none; }
             g:target { display: block; }
-            composite {
+            #composite use {
                 fill: transparent !important;
+                stroke-width: 0.5;
+            }
+            #composite use:nth-child(3n + 1) {
+                stroke: blue;
+            }
+            #composite use:nth-child(3n + 2) {
+                stroke: green;
+            }
+            #composite use:nth-child(3n) {
                 stroke: red;
-                stroke-width: 2px;
             }
         ]]></style>
         <symbol id='pig-symbol' viewBox='0 0 45 55'>

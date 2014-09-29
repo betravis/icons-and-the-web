@@ -84,8 +84,13 @@
         html.about body {
             background-image: url(resources/web-engine-team.jpg);
             background-size: cover;
+            background-position: center center;
             background-color: #333;
             background-blend-mode: multiply;
+        }
+        .font-icon {
+            height: 2em;
+            margin-bottom: -.1em;
         }
         </style>
     </head>
@@ -425,48 +430,63 @@
                         <h2>What is our ideal?</h2>
                     </section>
                     <section>
-                        <h2>Image-like</h2>
-                        <pre><code class='html'><!--
-                            <icon set='resources/social.icons'
-                                  name='twitter'
-                                  alt='twitter' />
-                        --></pre></code>
-                    </section>
-                    <section>
-                        <h2>Font-like</h2>
-                        <pre><code class='css'><!--
-                        @icon-set {
-                            src: url('resources/social.icons');
-                            name: 'SocialSet';
-                        }
-                        icon { icon-set: 'SocialSet'; }
-                        --></code></pre>
-                        <pre><code class='html'><!--
-                        <icon>Twitter</icon>
-                        --></code></pre>
-                        <aside class='notes'>
-                            * The icon is a single, separable element
-                            * It has accessible content
-                            * This means we can style and size it
-                        </aside>
-                    </section>
-                    <section>
                         <h2>Icons should be</h2>
                     </section>
                     <section>
-                        <h2>Packagable</h2>
+                        <h2>Scalable</h2>
+                        <div class='ribbon ascent'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                        </div>
                     </section>
                     <section>
                         <h2>Stylable</h2>
-                    </section>
-                    <section>
-                        <h2>Scalable</h2>
+                        <div class='ribbon'>
+                            <img src='resources/farm-animals.svg#rabbit' class='plain'>
+                            <img src='resources/farm-animals.svg#rabbit-alt' class='plain'>
+                        </div>
                     </section>
                     <section>
                         <h2>Accessible</h2>
+                        <div class='ribbon'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <code>"rabbit"</code>
+                        </div>
                     </section>
+
+                    <section>
+                        <h2>Packagable</h2>
+                        <div class='ribbon'>
+                            <img src='resources/farm-animals.svg#pig'> +
+                            <img src='resources/farm-animals.svg#chicken'> +
+                            <img src='resources/farm-animals.svg#fox'> +
+                            <img src='resources/farm-animals.svg#rabbit'> +
+                            <img src='resources/farm-animals.svg#cow'> =
+                            <img src='resources/farm-animals.svg#composite'>
+                        </div>
+                    </section>
+                    
                     <section>
                         <h2>Performant</h2>
+                        <div class='ribbon'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                            <img src='resources/farm-animals.svg#rabbit'>
+                        </div>
                         <aside class='notes'>
                             * Should have minimal footprint
                             * Preferable to load only what you need, in one resource request
@@ -474,11 +494,38 @@
                         </aside>
                     </section>
                     <section>
-                        <h2>Easy to use</h2>
-                        <pre><code class='css'>icon { icons: url('default.icons'); }</code></pre>
+                        <h2>Easy to author &amp; use</h2>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Potential Markups</h2>
+                    </section>
+                    <section>
+                        <h2>Image-like</h2>
+                        <pre><code class='html'><!--
+                            <icon set='resources/farm-animals.icons'
+                                  name='rabbit'
+                                  alt='rabbit' />
+                        --></pre></code>
+                    </section>
+                    <section>
+                        <h2>Font-like</h2>
+                        <pre><code class='css'><!--
+                        @icon-set {
+                            src: url('resources/farm-animals.icons');
+                            name: 'Farm Animals';
+                        }
+                        icon { icon-set: 'Farm Animals'; }
+                        --></code></pre>
+                        <pre><code class='html'><!--
+                        <icon>Rabbit</icon>
+                        --></code></pre>
                         <aside class='notes'>
-                            * Should be easy to use, just link to the resource.
-                            * Not to say this is the ideal form, just to say it should be this easy
+                            * The icon is a single, separable element
+                            * It has accessible content
+                            * This means we can style and size it
                         </aside>
                     </section>
                 </section>
@@ -580,7 +627,10 @@
                     <section>
                         <h1>&amp;#102;
                             <i class="fa fa-long-arrow-right"></i>
-                            <i class="fa fa-cloud"></i>
+                            <!-- <i class="fa fa-cloud"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' class='font-icon'>
+                                <use xlink:href="resources/farm-animals-monotone.svg#pig-monotone" fill="white" />
+                            </svg>
                         </h1>
                         <aside class='notes'>
                             * So why not just replace the visual representation with our icon (yay!)
@@ -943,6 +993,8 @@
                     </svg>
                 </section>
 
+                <section>Web Components</section>
+                
                 <section>
                     <h2>Credits</h2>
                     <ul>
