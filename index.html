@@ -41,16 +41,6 @@
             font-family: FontAwesome;
             font-style: normal;
         }
-        .reveal section img.plain {
-            background: transparent;
-            border: none;
-            box-shadow: initial;
-        }
-        /*.reveal section > svg {
-            max-width: 95%;
-            max-height: 95%;
-        }*/
-        }
         .reveal .big {
             font-size: 1.6em;
         }
@@ -71,21 +61,6 @@
             position: absolute;
             top: 0;
             left: 0;
-        }
-        html.topic body {
-            background-image: url(resources/icon-bg-tile.png);
-            background-color: #333;
-            background-size: cover;
-            background-blend-mode: multiply;
-        }
-        /*html.topic h1, html.topic h2 {
-            font-family: 'Homestead', 'Adobe Clean', 'Helvetica Neue', sans-serif;
-        }*/
-        html.about body {
-            background-image: url(resources/web-engine-team.jpg);
-            background-size: cover;
-            background-color: #333;
-            background-blend-mode: multiply;
         }
         </style>
     </head>
@@ -558,7 +533,7 @@
                         <h1>Anatomy of an icon font</h1>
                     </section>
                     <section>
-                        <img src='resources/font-anatomy.png' />
+                        <img src='resources/font-anatomy.png' class='plain'/>
                         <aside class='notes'>
                             * A font maps a character or set of characters to their visual representation (glyph).
                             * Generally vector based for clean rescaling
