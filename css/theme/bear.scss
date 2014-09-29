@@ -1,5 +1,5 @@
 /**
- * Theme for Moving Web Standards Forward Talk
+ * Theme for Icons and the Web
  * (c) 2013
  */
 
@@ -37,16 +37,20 @@ $lightTan: rgb(228, 223, 217);
 $tan: rgb(192, 181, 169);
 $darkTan: rgb(136, 120, 104);
 
+$mainBackgroundColor: rgb(114, 146, 169);
+$mainContentColor: rgb(244, 234, 208);
+$alternateBackgroundColor: rgb(214, 139, 109);
+$alternateContentColor: rgb(244, 234, 208);
 
 // Override theme settings (see ../template/settings.scss)
 $mainFont: 'Adobe Clean', 'Source Sans Pro', sans-serif;
-$mainColor: $lightTan;
+$mainColor: $mainContentColor;
 $headingFont: 'AdobeClean-BoldSemiCn', 'Adobe Clean', 'Source Sans Pro', sans-serif;
-$headingColor: $lightTan;
+$headingColor: $mainContentColor;
 $headingLetterSpacing: 0;
 $headingTextShadow: none;
 $headingTextTransform: none;
-$backgroundColor: darken($darkGrey, 30%);
+$backgroundColor: darken($mainBackgroundColor, 30%);
 $linkColor: $blue;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: #134674;
@@ -55,20 +59,30 @@ svg use {
     fill: $mainColor;
 }
 
-.inverse .reveal {
-    color: $backgroundColor;
-    h1, h2, h3, h4, h5, h6 { color: $backgroundColor; }
-    .state-background { background-color: darken($mainColor, 30%); }
+.reveal .state-background {
+    background-color: $backgroundColor;
+    @include vendor-prefix(transition, background-color 400ms ease);
 }
 
-.inverse {
-    color: $backgroundColor;
-    background-color: darken($mainColor, 30%);
+.topic {
+    color: $alternateContentColor;
+    h1, h2, h2, h4, h5, h6 {
+        color: $alternateContentColor;
+    }
+    .state-background {
+        background-color: darken($alternateBackgroundColor, 30%);
+        background-image: url(/resources/icon-bg-tile.png);
+        background-blend-mode: multiply;
+    }
 }
 
-// Background generator
-@mixin bodyBackground() {
-
+.about {
+    .state-background {
+        background-image: url(/resources/web-engine-team.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-blend-mode: overlay;
+    }
 }
 
 .reveal code, .reveal .monospace {
@@ -76,11 +90,6 @@ svg use {
     white-space: pre;
 }
 
-.reveal .show-container {
-    border: 2px solid $mainColor;
-    padding: .5em;
-    display: inline-block;
-}
 .reveal pre {
     font-size: 1em;
     width: 100%;
@@ -138,64 +147,10 @@ svg use {
     border: none;
     background: none;
     box-shadow: none;
-}
-
-.align-right img.floater {
-    position: absolute;
-    left: -100px;
-    top: -100px;
-    max-height: 400px;
-}
-
-.align-left img.floater {
-    position: absolute;
-    right: -100px;
-    top: -100px;
-    max-height: 400px;
-}
-
-img.float-right {
-    position: absolute;
-    right: -100px;
-    top: -100px;
-    max-height: 400px;
+    max-height: 60vh;
 }
 
 /* Color Schemes */
-$carpetRed: rgb(230, 63, 79);
-.bg-red .reveal {
-    color: $lightGrey;
-    h1, h2, h3, h4, h5, h6 { color: $lightGrey; }
-    .state-background { @include radial-gradient( darken($carpetRed, 60%), darken($carpetRed, 40%), ellipse ); }
-}
-
-.bg-brown .reveal {
-    color: $lightGrey;
-    h1, h2, h3, h4, h5, h6 { color: $lightGrey; }
-    .state-background { background-color: darken($darkTan, 30%); }
-    .highlight { color: $green; }
-}
-
-.bg-brown.inverse .reveal {
-    color: $darkTan;
-    h1, h2, h3, h4, h5, h6 { color: $darkTan; }
-    .state-background { background-color: lighten($lightTan, 30%); }
-    .highlight { color: $green; }
-}
-
-.profile .reveal {
-    .state-background {
-        background: -webkit-radial-gradient(left bottom, 100% 100%, transparent, transparent 90%, $backgroundColor 90%), url('profile.jpg');
-        background-size: 50% 100%, 50% auto;
-        background-repeat: no-repeat;
-        background-position: left bottom;
-        @include vendor-prefix(transition, none);
-    }
-}
-
-.gradient .reveal .state-background {
-    background: -webkit-linear-gradient(bottom left, lighten($backgroundColor, 30%), $backgroundColor);
-}
 
 .reveal {
     h1, h2, h3, h4, h5, h6 { line-height: 1.1em; font-weight: 900; }
@@ -249,21 +204,6 @@ $carpetRed: rgb(230, 63, 79);
         border: 1em solid transparent;
         border-bottom-width: 0;
         border-top: 1em solid darken($mainColor, 30%);
-    }
-}
-
-.reveal .wedge {
-    min-height: 3em;
-    position: relative;
-    padding-top: 2em;
-    :before {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        margin-left: -1em;
-        border: 1em solid transparent;
-        border-top-color: $backgroundColor;
-        content: ' ';
     }
 }
 
