@@ -1,0 +1,112 @@
+<section data-state='topic'>
+    <h2>Icon Delivery</h2>
+</section>
+
+<section>
+    <h2>How do we actually use them?</h2>
+</section>
+
+<section>
+    <section>
+        <h2>What is our ideal?</h2>
+    </section>
+    <section>
+        <h2>Icons should be</h2>
+    </section>
+    <section>
+        <h2>Scalable</h2>
+        <div class='ribbon ascent'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+        </div>
+    </section>
+    <section>
+        <h2>Stylable</h2>
+        <div class='ribbon'>
+            <img src='resources/farm-animals.svg#rabbit' class='plain'>
+            <img src='resources/farm-animals.svg#rabbit-alt' class='plain'>
+        </div>
+    </section>
+    <section>
+        <h2>Accessible</h2>
+        <div class='ribbon'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <code>"rabbit"</code>
+        </div>
+    </section>
+
+    <section>
+        <h2>Packagable</h2>
+        <div class='ribbon'>
+            <img src='resources/farm-animals.svg#pig'> +
+            <img src='resources/farm-animals.svg#chicken'> +
+            <img src='resources/farm-animals.svg#fox'> +
+            <img src='resources/farm-animals.svg#rabbit'> +
+            <img src='resources/farm-animals.svg#cow'> =
+            <img src='resources/farm-animals.svg#composite'>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Performant</h2>
+        <div class='ribbon'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+        </div>
+        <aside class='notes'>
+            * Should have minimal footprint
+            * Preferable to load only what you need, in one resource request
+            * No script DOM manipulation
+        </aside>
+    </section>
+    <section>
+        <h2>Easy to author &amp; use</h2>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Potential Markups</h2>
+    </section>
+    <section>
+        <h2>Image-like</h2>
+        <pre><code class='html'><!--
+            <icon set='resources/farm-animals.icons'
+                  name='rabbit'
+                  alt='rabbit' />
+        --></pre></code>
+    </section>
+    <section>
+        <h2>Font-like</h2>
+        <pre><code class='css'><!--
+        @icon-set {
+            src: url('resources/farm-animals.icons');
+            name: 'Farm Animals';
+        }
+        icon { icon-set: 'Farm Animals'; }
+        --></code></pre>
+        <pre><code class='html'><!--
+        <icon>Rabbit</icon>
+        --></code></pre>
+        <aside class='notes'>
+            * The icon is a single, separable element
+            * It has accessible content
+            * This means we can style and size it
+        </aside>
+    </section>
+</section>

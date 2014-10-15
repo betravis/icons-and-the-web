@@ -1,0 +1,248 @@
+<section data-state='topic'>
+    <h2>Icon fonts</h2>
+</section>
+
+<section>
+    <section>
+        <h2>Anatomy of an icon font</h2>
+    </section>
+    <section>
+        <img src='resources/font-anatomy.png' class='plain'/>
+        <aside class='notes'>
+            * A font maps a character or set of characters to their visual representation (glyph).
+            * Generally vector based for clean rescaling
+            * Package for a set of vector artwork
+            * Mapping taken care of by the browser to replace source characters with their vector representation
+        </aside>
+    </section>
+    <section>
+        <h1>&amp;#112;
+            <i class="fa fa-long-arrow-right"></i>
+        p</h1>
+        <aside class='notes'>
+            * A font takes a code point, the numerical representation of the letter on the computer, and maps it to a visual representation
+            * Here we have the code point 102 as an HTML entity translating to 'F'
+            * There are several different encodings that represent the mapping between a number and a letter, in general the one you're going to be working with is probably Unicode
+            * Font formats like OTF support the Unicode code point mapping
+        </aside>
+    </section>
+    <section>
+        <h1>&amp;#112;
+            <i class="fa fa-long-arrow-right"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' class='font-icon'>
+                <use xlink:href="resources/farm-animals-monotone.svg#pig-monotone" />
+            </svg>
+        </h1>
+        <aside class='notes'>
+            * So why not just replace the visual representation with our icon (yay!)
+        </aside>
+    </section>
+
+    <section>
+        <pre><code class='css'><!--
+        @font-face {
+            name: icon-font;
+            src: url(icon-font.woff) format(woff);
+        }
+        .icon { font-family: icon-font; }
+        .icon-pig:before { content: 'p'; }
+        --></code></pre>
+        <pre><code class='html'><!--
+        <span class='icon icon-pig'></span>
+        --></code></pre>
+    </section>
+
+    <section>
+        <h2>Stylable</h2>
+        <div class='ribbon ascent'>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55'>
+                <use xlink:href="resources/farm-animals-monotone.svg#pig-monotone" style="fill:#ffff9d"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55'>
+                <use xlink:href="resources/farm-animals-monotone.svg#pig-monotone" style="fill:#beeb9f"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55'>
+                <use xlink:href="resources/farm-animals-monotone.svg#pig-monotone" class='color-rotate'/>
+            </svg>
+        </div>
+    </section>
+    <section>
+        <h2>and well supported</h2>
+        <table class='support'><!--
+            {
+                "ie": { "version": "5", "support": "support" },
+                "ff": { "version": "32", "support": "support" },
+                "cr": { "version": "37", "support": "support" },
+                "s": { "version": "7", "support": "support" },
+                "o": { "version": "24", "support": "support" },
+                "ios": { "version": "8", "support": "support" },
+                "a": { "version": "4.1", "support": "support" }
+            }
+        --></table>
+        <aside class='notes'>
+            Tested on current versions of evergreen browsers, plus older verions of others
+            CR(37), S(7), FF(32), IE(11 down), O(24), iOS(8), A(4.1.2, 4.3), mCR(31)
+        </aside>
+    </section>
+    <section>
+        <h2>but it's still a hack&hellip;</h2>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Alternate Glyph Mappings</h2>
+        <aside class='notes'>
+            * what character or characters are we replacing with the icon?
+        </aside>
+    </section>
+    <section>
+        <h2>ASCII</h2>
+    </section>
+    <section>
+        <h2>p <i class='fa fa-long-arrow-right'></i>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' class='font-icon'>
+                <use xlink:href="resources/farm-animals-monotone.svg#pig-monotone" />
+            </svg>
+        </h2>
+        <aside class='notes'>
+            * The simplest mapping is to go from your typical alphabetical characters to your icon
+            * But screen readers will read this as 'p', semantically doesn't make much sense.
+        </aside>
+    </section>
+
+    <section>
+        <h2>Unicode Symbols/PUA</h2>
+        <aside class='notes'>
+            * Unicode has some areas (code points) set aside that are not and will not be added as part of a language
+            * Fonts and users can use them however they want.
+        </aside>
+    </section>
+    <section>
+        <h2> &amp;#xe000; <i class='fa fa-long-arrow-right'></i>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' class='font-icon'>
+                <use xlink:href="resources/farm-animals-monotone.svg#pig-monotone" />
+            </svg>
+        </h2>
+    </section>
+    <section>
+        <table class='support'><!--
+            {
+                "ie": { "version": "5", "support": "support" },
+                "ff": { "version": "32", "support": "support" },
+                "cr": { "version": "37", "support": "support" },
+                "s": { "version": "7", "support": "support" },
+                "o": { "version": "24", "support": "support" },
+                "ios": { "version": "8", "support": "support" },
+                "a": { "version": "4.1", "support": "support" }
+            }
+        --></table>
+    </section>
+
+    <section>
+        <h2>Ligatures</h2>
+    </section>
+    <section>
+        <h2 style='text-rendering: initial'>fi <i class='fa fa-long-arrow-right'></i> &#xfb01;</h2>
+    </section>
+    <section>
+        <h2 style='text-rendering: initial'>fish <i class='fa fa-long-arrow-right'></i> &#xfb01;sh</h2>
+        <aside class='notes'>
+            * A more advanced typography feature, ligatures, allows you to combine a sequence of code points into a single glyph
+            (is glyph the right term to use here?)
+            * Goal is to combine marks to flow well together, fl, ff
+        </aside>
+    </section>
+    <section>
+        <h2>pig <i class='fa fa-long-arrow-right'></i>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' class='font-icon'>
+                <use xlink:href="resources/farm-animals-monotone.svg#pig-monotone" />
+            </svg>
+        </h2>
+        <aside class='notes'>
+            * What if, instead, we replace the text 'cloud' with it's icon as a glyph
+        </aside>
+    </section>
+    <section>
+    <table class='support'><!--
+            {
+                "ie": { "version": "10", "support": "support highlight" },
+                "ff": { "version": "32", "support": "support" },
+                "cr": { "version": "37", "support": "support" },
+                "s": { "version": "7", "support": "support" },
+                "o": { "version": "24", "support": "support" },
+                "ios": { "version": "8", "support": "support" },
+                "a": { "version": "4.1", "support": "support" }
+            }
+        --></table>
+        <aside class='notes'>
+        </aside>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Bulletproof Font Icons</h2>
+        <p>via <a href='http://filamentgroup.com/lab/bulletproof_icon_fonts.html'>filament group</a></p>
+    </section>
+    <section>
+        <h2>Fallback to hidden</h2>
+    </section>
+    <section class='align-center'>
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' class='font-icon'>
+                <use xlink:href="resources/farm-animals-monotone.svg#rabbit-monotone" />
+            </svg>
+            Rabbit
+        </h2>
+        <p>&ndash; vs &ndash;</p>
+        <h2>&#xe400; Rabbit</h2>
+        <p>&ndash; vs &ndash;</p>
+        <h2>Rabbit</h2>
+    </section>
+
+    <section>
+        <h2>Fallback to text</h2>
+    </section>
+    <section class='align-center'>
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' class='font-icon'>
+                <use xlink:href="resources/farm-animals-monotone.svg#rabbit-monotone" />
+            </svg>
+        </h2>
+        <p>&ndash; vs &ndash;</p>
+        <h2>&#xe400;</h2>
+        <p>&ndash; vs &ndash;</p>
+        <h2>Rabbit</h2>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>What&rsquo;s good</h2>
+        <ul>
+            <li>Scalable</li>
+            <li>Stylable</li>
+            <li>Solid browser support</li>
+        </ul>
+        <aside class='notes'>
+            * http://filamentgroup.com/lab/bulletproof_icon_fonts.html
+            * Thoughts: http://ianfeather.co.uk/ten-reasons-we-switched-from-an-icon-font-to-svg/
+            * Browser font adjustments: a little bold, a little light, antialiased, whatever -- not as much control
+            * Positioning can feel a little awkward, absolute, line-height
+            * Fallbacks can be weird
+            * Square peg, round hole and all that
+            * BUT, especially if you are interspersing icons and text, can work well
+            * And, supported as well as fonts on the web -- pretty well (need to test)
+            * But it's still pretty hacky
+        </aside>
+    </section>
+    <section>
+    <h2>What&rsquo;s not</h2>
+        <ul>
+            <li>Imprecise size &amp; positioning</li>
+            <li>Verbose accessibility &amp; fallbacks</li>
+            <li>Difficult to author fonts</li>
+        </ul>
+    </section>
+</section>

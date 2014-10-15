@@ -1,0 +1,245 @@
+<section data-state='topic'>
+    <h2>SVG</h2>
+</section>
+
+<section>
+    <section>
+        <figure class='ribbon ascent'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#rabbit'>
+        </figure>
+        <aside class='notes'>
+            * SVG, scalable vector graphics
+            * Define paths that will scale, so they'll look great at any size
+        </aside>
+    </section>
+    <section>
+        <pre><code class='svg'><!--
+        <?xml version="1.0" encoding="utf-8"?>
+        <svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100">
+            <path fill="#DA727E" d="&hellip;"/>
+        </svg>
+        --></code></pre>
+        <aside class='notes'>
+            * Some very quick highlights about SVG
+            * It is its own xml-based document format. It's similar to HTML, but slightly different.
+            * It was designed to describe scalable vector artwork.
+            * Because it has its own format, there are a couple interesting things you can do with it, which we'll get to in a second.
+        </aside>
+    </section>
+    <section>
+        <h2>Support</h2>
+        <table class='support'><!--
+            {
+                "ie": { "version": "9", "support": "support highlight" },
+                "ff": { "version": "30", "support": "support" },
+                "cr": { "version": "27", "support": "support" },
+                "s": { "version": "5.1", "support": "support" },
+                "o": { "version": "23", "support": "support" },
+                "ios": { "version" : "6.1", "support": "support" },
+                "a": { "version": "4.4", "support": "support highlight" }
+            }
+        --></table>
+        <aside class='notes'>
+            * One of the reasons we're starting to see more excitement around SVG is that browser support is reaching critical mass
+            * Older browsers that don't support it are less prominent today, and supporting browsers represent a good section of the market
+            * Data from caniuse: Android has partial support back to 4 (no masking)
+        </aside>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Including SVG</h2>
+    </section>
+    <section>
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55'>
+                <use xlink:href="resources/farm-animals-monotone.svg#rabbit-duotone" style="fill:#acf0f2"/>
+            </svg>
+            Inline
+        </h2>
+    </section>
+    <section>
+        <pre><code class='html'><!--
+        <html>
+          <p>Some text</p>
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100">
+            <path d="&hellip;" />
+          </svg>
+        </html>
+        --></code></pre>
+        <aside class='notes'>
+            * You can use it inline, just drop the svg right into your html
+            * Note that you still have to refer to the svg namespace
+        </aside>
+    </section>
+    <section>
+        <figure class='flex-ribbon'>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' height='10em'>
+                <use xlink:href="resources/farm-animals-monotone.svg#rabbit-duotone" style="fill:#acf0f2"/>
+        </svg>
+        <pre><code class='css'><!--
+        p { color: blue; }
+        path { fill: blue; }--></code></pre>
+        </figure>
+    </section>
+    <section>
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' height='10em'>
+                <use xlink:href="resources/farm-animals.svg#rabbit" style="fill:#acf0f2"/>
+            </svg>
+            Linked
+        </h2>
+    </section>
+    <section>
+        <pre><code class='html'><!--
+        <img src="rabbit.svg">
+        --></code></pre>
+        <pre><code class='css'><!--
+        .icon-rabbit { background: url(rabbit.svg); }
+        --></code></pre>
+        <aside class='notes'></aside>
+    </section>
+</section>
+
+<section><h2>SVG as Package</h2></section>
+<section>
+    <section><h2>Icon Stacks</h2></section>
+    <section>
+        <div class='ribbon'>
+            <img src='resources/farm-animals-outlines.svg#pig'> +
+            <img src='resources/farm-animals-outlines.svg#chicken'> +
+            <img src='resources/farm-animals-outlines.svg#fox'> +
+            <img src='resources/farm-animals-outlines.svg#rabbit'> +
+            <img src='resources/farm-animals-outlines.svg#cow'> =
+            <img src='resources/farm-animals-outlines.svg#composite'>
+        </div>
+    </section>
+    <section>
+        <pre><code class="css"><!--
+            g { visibility: hidden; }
+            g:target { visibility: initial; }
+        --></code></pre>
+        <pre><code class='svg'><!--
+            <g id="rabbit"> &hellip; </g>
+            <g id="chicken"> &hellip; </g>
+            <g id="cow"> &hellip; </g>
+        --></code></pre>
+    </section>
+    <section>
+        <figure>
+            <img src='resources/farm-animals.svg#chicken' style='margin-top: -15%;'>
+            <figcaption>
+            <pre><code class='html'><!--
+            <img src="resources/animals.svg#chicken">
+            --></code></pre>
+            </figcaption>
+        </figure>
+    </section>
+    <section>
+        <table class='support'><!--
+        {
+            "ie": { "version": "9", "support": "support highlight" },
+            "ff": { "version": "32", "support": "support" },
+            "cr": { "version": "37", "support": "support" },
+            "s": { "version": "7.1", "support": "partial-support highlight" },
+            "o": { "version": "24", "support": "support" },
+            "ios": { "version": "8", "support": "partial-support highlight" },
+            "a": { "version": "4.3", "support": "no-support highlight" }
+        }
+        --></table>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Icon Symbols</h2>
+    </section>
+    <section>
+        Internal Symbol
+        <pre><code class='svg'><!--
+        <defs>
+            <symbol id="chicken">
+                <path d="&hellip;" />
+            </symbol>
+        </defs>
+        <use xlink:href="#chicken" />
+        --></code></pre>
+    </section>
+    <section>
+        External Symbol
+        <pre><code class='html'><!--
+        <html>
+        <svg xmlns="&hellip;" xmlns:xlink="&hellip;">
+            <use xlink:href="animals.svg#chicken" />
+        </svg>
+        </html>
+        --></code></pre>
+    </section>
+    <section>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' style='margin-top: -15%'>
+            <use xlink:href="resources/farm-animals.svg#chicken-symbol" />
+        </svg>
+    </section>
+    <section>
+        <h2>Accessible</h2>
+    </section>
+    <section>
+        <pre><code class='svg'><!--
+        <symbol id="chicken">
+            <title>Chicken</title>
+            <desc>A chicken icon</desc>
+            <path d="&hellip;" />
+        </symbol>
+        --></code></pre>
+    </section>
+    <section>
+        <h2>Stylable</h2>
+    </section>
+    <section>
+        <figure>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' style='margin-top: -15%'>
+            <use xlink:href="resources/farm-animals-monotone.svg#rabbit-duotone" style="fill:#acf0f2"/>
+        </svg>
+        <pre><code class='svg'><!--
+        <use xlink:href='&hellip;#rabbit' fill='blue' />
+        --></code></pre>
+        </figure>
+    </section>
+    <section>
+        <table class='support'><!--
+        {
+            "ie": { "version": "11", "support": "no-support highlight" },
+            "ff": { "version": "32", "support": "support" },
+            "cr": { "version": "37", "support": "support" },
+            "s": { "version": "7", "support": "support" },
+            "o": { "version": "24", "support": "support" },
+            "ios": { "version": "8", "support": "support" },
+            "a": { "version": "4.3", "support": "support highlight" }
+        }
+        --></table>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>What&rsquo;s Good</h2>
+        <ul>
+            <li>Individual or packaged icons</li>
+            <li>Vector based</li>
+            <li>Use as image</li>
+            <li>Many tool options</li>
+        </ul>
+    </section>
+    <section>
+        <h2>What&rsquo;s Not</h2>
+        <ul>
+            <li>Browser support</li>
+        </ul>
+    </section>
+</section>
+

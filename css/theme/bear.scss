@@ -1,3 +1,5 @@
+---
+---
 /**
  * Theme for Icons and the Web
  * (c) 2013
@@ -5,8 +7,8 @@
 
 
 // Default mixins and settings -----------------
-@import "../../reveal.js/css/theme/template/mixins";
-@import "../../reveal.js/css/theme/template/settings";
+@import "../reveal.js/css/theme/template/mixins";
+@import "../reveal.js/css/theme/template/settings";
 // ---------------------------------------------
 
 // Include theme-specific fonts
@@ -37,10 +39,10 @@ $lightTan: rgb(228, 223, 217);
 $tan: rgb(192, 181, 169);
 $darkTan: rgb(136, 120, 104);
 
-$mainBackgroundColor: rgb(114, 146, 169);
-$mainContentColor: rgb(244, 234, 208);
-$alternateBackgroundColor: rgb(214, 139, 109);
-$alternateContentColor: rgb(244, 234, 208);
+$mainBackgroundColor: desaturate(rgb(89, 65, 56), 20);
+$mainContentColor: lighten(desaturate(rgb(242, 223, 206), 20), 10);
+$alternateBackgroundColor: darken(desaturate(rgb(217, 187, 160), 20), 10);
+$alternateContentColor: rgb(89, 65, 56);
 
 // Override theme settings (see ../template/settings.scss)
 $mainFont: 'Adobe Clean', 'Source Sans Pro', sans-serif;
@@ -50,8 +52,8 @@ $headingColor: $mainContentColor;
 $headingLetterSpacing: 0;
 $headingTextShadow: none;
 $headingTextTransform: none;
-$backgroundColor: darken($mainBackgroundColor, 30%);
-$linkColor: $blue;
+$backgroundColor: $mainBackgroundColor;
+$linkColor: lighten(desaturate($blue, 10), 20);
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: #134674;
 
@@ -95,27 +97,30 @@ svg use {
     width: 100%;
 }
 
-.reveal .slides { text-align: center; }
+.reveal .slides { text-align: left; text-rendering: optimizeLegibility; }
 
 .reveal section { text-align: inherit; }
 
 .reveal section.align-center { text-align: center; }
+
+.reveal figure {
+    text-align: center;
+    * { box-shadow: none; }
+}
 
 .reveal section.align-left { text-align: left; }
 
 .reveal section.align-right { text-align: right; }
 
 // Theme template ------------------------------
-@import "../../reveal.js/css/theme/template/theme";
+@import "../reveal.js/css/theme/template/theme";
 // ---------------------------------------------
 
 /* could insert a media query here to adjust font size / slide-size for larger screens */
 /* @media screen and (min-width: 900px and min-height: 600px ) ... */
 
-.reveal .highlight { color: $blue; }
-
-.reveal div.ribbon {
-    > img {
+.reveal .ribbon {
+    > * {
         vertical-align: middle;
         height:128px;
         background: none;
@@ -123,13 +128,13 @@ svg use {
         box-shadow: none;
         margin: 0;
     }
-    &.small > img {
+    &.small > * {
         height: 64px;
     }
-    &.big > img {
+    &.big > * {
         height: 256px;
     }
-    &.ascent > img {
+    &.ascent > * {
         vertical-align: baseline;
         &:nth-child(1) {
             height: 64px;
@@ -143,10 +148,10 @@ svg use {
     }
 }
 
-.reveal img.plain {
-    border: none;
-    background: none;
-    box-shadow: none;
+.reveal img, .reveal svg {
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
     max-height: 60vh;
 }
 
@@ -228,18 +233,30 @@ svg use {
     background-color: #b2382d;
 }
 
+$support-color: lighten(desaturate(#84b24e, 15), 5);
+$partial-support-color: desaturate(#fccb5f, 25);
+$no-support-color: desaturate(#f0614a, 25);
+
 table.support {
     display: inline-block;
+    margin: 0 auto;
     tr {
-        display: inline-flex;
+        display: flex;
         align-items: baseline;
+        &:first-child td {
+            padding: .25em;
+        }
     }
     td {
         display: block;
-        width: 96px;
-        flex: none;
+        max-width: 140px;
+        flex: 1;
         text-align: center;
-        padding: 0 0.5em 0.5em 0;
+        padding: 0.25em;
+        margin: .2em;
+        border: none;
+        background-clip: padding-box;
+        border-radius: .15em;
         img {
             border: none;
             margin: 0;
@@ -248,5 +265,19 @@ table.support {
             width: 100%;
             vertical-align: bottom;
         }
+        &.highlight {
+            border: .15em solid $mainColor;
+            margin: .05em;
+            border-radius: .25em;
+        }
+    }
+    .support {
+        background-color: $support-color;
+    }
+    .partial-support {
+        background-color: $partial-support-color;
+    }
+    .no-support {
+        background-color: $no-support-color;
     }
 }

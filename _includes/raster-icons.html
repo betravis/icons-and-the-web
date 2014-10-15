@@ -1,0 +1,85 @@
+<section data-state='topic'>
+    <h2>Raster Icons</h2>
+</section>
+
+<section>
+    <section>
+        <figure>
+        <img class='plain' src='resources/cow-raster.png' />
+        </figure>
+        <aside class='notes'>
+            * This method is probably the most widely supported
+            * Uses a pixel-based image format, such as png, gif, jpg
+            * When designing these, you know exactly what each pixel will be
+            * Provided it displays at the intended size
+        </aside>
+    </section>
+    <section>
+        <pre><code class='html'><!--
+        <img class='icon' src='icon-cow.png'>
+        --></code></pre>
+    </section>
+    <section>
+        <pre><code class='css'><!--
+        .icon { /* formatting */ }
+        .icon-cow {
+            background: url('icon-cow.png');
+        }
+        --></code></pre>
+        <pre><code class='html'><!--
+        <span class='icon icon-cow'></span>
+        --></code></pre>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Minimizing resource loads</h2>
+    </section>
+    <section>
+        <h2>Stylesheet Embed</h2>
+        <pre><code class='css'><!--
+        .icon-cow {
+            background: url(data:image/png;base64,...);
+        }
+        --></code></pre>
+    </section>
+    <section>
+        <h2>Spritesheet</h2>
+        <div class='ribbon' style="display: inline-block; border-width: .1em; border-style: solid; border-radius: .3em; background-color: rgba(255, 255, 255, 0.3);">
+            <img src='resources/farm-animals.svg#pig'>
+            <img src='resources/farm-animals.svg#chicken'>
+            <img src='resources/farm-animals.svg#fox'>
+            <img src='resources/farm-animals.svg#rabbit'>
+            <img src='resources/farm-animals.svg#cow'>
+        </div>
+    </section>
+    <section>
+        <pre><code class='css'><!--
+        .icon {
+            background: url('spritesheet.png');
+        }
+        .icon-cow {
+            background-size: 80px 24px;
+            background-position: -64px 0;
+        }
+        --></code></pre>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>What&rsquo;s Good</h2>
+        <ul>
+            <li>Pixel-level control</li>
+            <li>Browser support</li>
+        </ul>
+    </section>
+    <section>
+        <h2>What&rsquo;s Not</h2>
+        <ul>
+            <li>Fixed size &amp; resolution</li>
+            <li>Limited packaging support</li>
+        </ul>
+    </section>
+</section>

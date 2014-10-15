@@ -3,21 +3,8 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
     <defs>
         <style type='text/css'><![CDATA[
-            g { display: none; }
-            g:target { display: block; }
-            #composite use {
-                fill: transparent !important;
-                stroke-width: 0.5;
-            }
-            #composite use:nth-child(3n + 1) {
-                stroke: blue;
-            }
-            #composite use:nth-child(3n + 2) {
-                stroke: green;
-            }
-            #composite use:nth-child(3n) {
-                stroke: red;
-            }
+            g { visibility: hidden; }
+            g:target { visibility: initial; }
         ]]></style>
         <symbol id='pig-symbol' viewBox='0 0 45 55'>
             <path fill="#F29E9F" d="M32.44,43.21c0.93,0.79,2.47,0.94,3.57,0.43c0.65-0.3,2.23-1.62,0.8-2.03c-0.77-0.22-1.51,0.29-1.42,1.09c0.12,1.13,1.28,1.68,2.29,1.63c0.36-0.02,1.16-0.59,0.43-0.55c-0.88,0.05-1.75-0.72-1.65-1.65c0.01-0.03,0.02-0.07,0.03-0.1c-0.5,0-0.56,0.12-0.17,0.36c0.13,0.3-0.5,0.73-0.67,0.84c-0.62,0.4-1.69,0.01-2.2-0.42C33.18,42.58,32.18,43,32.44,43.21L32.44,43.21z"/>

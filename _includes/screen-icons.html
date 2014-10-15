@@ -1,0 +1,129 @@
+<section data-state='topic'>
+    <h2>Icons on Screens</h2>
+    <aside class='notes'>
+        * Icons are small enough that you have to start thinking about actual pixels
+        * Always a danger if you design and display at a different size
+    </aside>
+</section>
+<section>
+    <h2>The challenge</h2>
+    <p>Icons have to communicate an idea clearly in a limited amount of visual&nbsp;real&nbsp;estate.</p>
+</section>
+
+<section>
+    <section>
+        <h2>Pixel Perfect</h2>
+    </section>
+    <section>
+        <figure>
+            <img class='plain' src='resources/black-arrow.png'>
+            <figcaption>
+                16 x 24 icon
+            </figcaption>
+        </figure>
+        <aside class='notes'>
+            * Let's revisit that cursor arrow icon I showed earlier.
+            * It's only 16 x 24 pixels in dimension.
+            * That's 384 pixels to communicate an idea, and most of them are empty to give space.
+        </aside>
+    </section>
+
+    <section>
+        <figure class='flex-ribbon'>
+            <div>
+                <img class='plain' src='resources/cursor-icon-set.svg#vector-arrow'>
+                <h3>Ideal</h3>
+            </div>
+            <div>
+                <img class='plain' src='resources/cursor-icon-set.svg#black-arrow'>
+                <h3>Pixels</h3>
+            </div>
+        </figure>
+        <aside class='notes'>
+            * Icons often begin as an idealized form that is then translated to pixels.
+            * Although you generally can't go wrong with icon design, the smaller the icon will be, the more necessary simplicity becomes.
+            * Small details won't make it into a translation that's only 16 pixels wide.
+            * During the translation, you can do some clean-up to make
+            * This cursor icon, for example, is designed to fit into 16x24 pixels.
+            * That's not that many, so it's important to get every single one right.
+        </aside>
+    </section>
+
+    <section>
+        <figure class='flex-ribbon'>
+            <div>
+                <img class='plain' src='resources/cursor-icon-set.svg#vector-arrow'>
+                <h3>Vector</h3>
+            </div>
+            <div>
+                <img class='plain' src='resources/cursor-icon-set.svg#black-arrow'>
+                <h3>Raster</h3>
+            </div>
+        </figure>
+        <aside class='notes'>
+            * Icons often begin as an idealized form that is then translated to pixels.
+            * Although you generally can't go wrong with icon design, the smaller the icon will be, the more necessary simplicity becomes.
+            * Small details won't make it into a translation that's only 16 pixels wide.
+            * During the translation, you can do some clean-up to make
+            * This cursor icon, for example, is designed to fit into 16x24 pixels.
+            * That's not that many, so it's important to get every single one right.
+        </aside>
+    </section>
+    
+    <section>
+        <figure>
+            <img class='plain' src='resources/arrow-rasterizations.png'>
+            <figcaption>16x24, 24x36, 32x48</figcaption>
+        </figure>
+        <aside class='notes'>
+            * If we have the original form in vector format,
+            * We can render it at each size we want, and then potentially correct the pixels
+            * We have to be careful if this is done automatically for us.
+            * In this case, the ideal was authored on a 16x24 grid
+            * When translated to a 24x36px grid, some coordinates start to fall on half pixel boundaries.
+            * If you look at the middle icon, you can see that the left edge isn't crisp, both the white and black edges have antialiased.
+            * Although slight, artifacts like this will cause icons to look blurry.
+        </aside>
+    </section>
+
+    <section>
+        <figure>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 200 100'>
+                <use style='fill: white' xlink:href='resources/image-icon.svg#image-symbol' width='100' height='100' x='50'/>
+            </svg>
+            <figcaption>icon on 20 x 20 grid</figcaption>
+        </figure>
+        <aside class='notes'>
+            * I want to show you one more example of what can happen when you render vectors
+            * Take this example of an image icon, drawn as a vector on a 20x20 unit grid.
+        </aside>
+    </section>
+
+    <section>
+        <figure>
+            <img class='plain' src='resources/image-icon-placed.png'>
+            <figcaption>result of 0.5px offset</figcaption>
+        </figure>
+        <aside class='notes'>
+            * If the vector is rendered not on a pixel boundary, all of the lines become antialiased.
+            * This will result in a blurry looking icon, and has significantly altered the icon's appearance (the outline is much different), and can therefore affect how the icon looks wrt other icons in the set.
+        </aside>
+    </section>
+
+    <section>
+        <h2>The bad news</h2>
+        <aside class='notes'>
+            * So we kind of have some bad news / good news
+        </aside>
+    </section>
+    <section>
+        <p class='big'>Icons may lose clarity when working with anything other than the exact pixels.</p>
+    </section>
+    
+    <section>
+        <h2>The good news</h2>
+    </section>
+    <section>
+        <p class='big'>High resolution displays make these issues less visible.</p>
+    </section>
+</section>

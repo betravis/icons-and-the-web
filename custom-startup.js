@@ -25,13 +25,13 @@ for (var i = 0; i < codes.length; i++) {
 
 function browserIcon(browser) {
     switch (browser) {
-        case 'cr': return 'resources/chrome.png';
-        case 'ff': return 'resources/firefox.png';
-        case 'ie': return 'resources/internet-explorer.png';
-        case 'o': return 'resources/opera.png';
-        case 's': return 'resources/safari.png';
-        case 'ios': return 'resources/mobile-browsers.svg#ios';
-        case 'a': return 'resources/mobile-browsers.svg#android';
+        case 'cr': return 'resources/browser-logos.svg#chrome';
+        case 'ff': return 'resources/browser-logos.svg#firefox';
+        case 'ie': return 'resources/browser-logos.svg#internet-explorer';
+        case 'o': return 'resources/browser-logos.svg#opera';
+        case 's': return 'resources/browser-logos.svg#safari';
+        case 'ios': return 'resources/browser-logos.svg#ios';
+        case 'a': return 'resources/browser-logos.svg#android';
         default: return null;
     }
 }
@@ -52,15 +52,18 @@ for (i = 0; i < supports.length; i++) {
     var browsers = document.createElement('tr'),
         versions = document.createElement('tr'),
         td, img;
+
     for (var browser in content) {
         td = document.createElement('td');
         img = document.createElement('img');
         img.setAttribute('src', browserIcon(browser));
+        img.setAttribute('class', 'plain');
         td.appendChild(img);
         browsers.appendChild(td);
 
         td = document.createElement('td');
-        td.innerHTML = content[browser];
+        td.innerHTML = content[browser].version;
+        td.setAttribute('class', content[browser].support);
         versions.appendChild(td);
     }
     support.appendChild(browsers);

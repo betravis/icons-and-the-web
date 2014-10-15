@@ -5,10 +5,10 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
 svg use {
-  fill: #f4ead0; }
+  fill: #fcf9f7; }
 
 .reveal .state-background {
-  background-color: #314451;
+  background-color: #4b4846;
   -webkit-transition: background-color 400ms ease;
   -moz-transition: background-color 400ms ease;
   -o-transition: background-color 400ms ease;
@@ -16,11 +16,11 @@ svg use {
   transition: background-color 400ms ease; }
 
 .topic {
-  color: #f4ead0; }
+  color: #594138; }
   .topic h1, .topic h2, .topic h2, .topic h4, .topic h5, .topic h6 {
-    color: #f4ead0; }
+    color: #594138; }
   .topic .state-background {
-    background-color: #854125;
+    background-color: #6a5543;
     background-image: url(/resources/icon-bg-tile.png);
     background-blend-mode: multiply; }
 
@@ -39,13 +39,19 @@ svg use {
   width: 100%; }
 
 .reveal .slides {
-  text-align: center; }
+  text-align: left;
+  text-rendering: optimizeLegibility; }
 
 .reveal section {
   text-align: inherit; }
 
 .reveal section.align-center {
   text-align: center; }
+
+.reveal figure {
+  text-align: center; }
+  .reveal figure * {
+    box-shadow: none; }
 
 .reveal section.align-left {
   text-align: left; }
@@ -57,15 +63,15 @@ svg use {
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #314451;
-  background-color: #314451; }
+  background: #4b4846;
+  background-color: #4b4846; }
 
 .reveal {
   font-family: "Adobe Clean", "Source Sans Pro", sans-serif;
   font-size: 36px;
   font-weight: normal;
   letter-spacing: -0.02em;
-  color: #f4ead0; }
+  color: #fcf9f7; }
 
 ::selection {
   color: #fff;
@@ -82,7 +88,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #f4ead0;
+  color: #fcf9f7;
   font-family: "AdobeClean-BoldSemiCn", "Adobe Clean", "Source Sans Pro", sans-serif;
   line-height: 0.9em;
   letter-spacing: 0;
@@ -96,7 +102,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #00a4e4;
+  color: #54c9f6;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -105,13 +111,13 @@ body {
   transition: color .15s ease; }
 
 .reveal a:not(.image):hover {
-  color: #4bccff;
+  color: #b5e7fb;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #006d98; }
+  background: #0db1f1; }
 
 /*********************************************
  * IMAGES
@@ -119,7 +125,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #f4ead0;
+  border: 4px solid #fcf9f7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
@@ -129,7 +135,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #00a4e4;
+  border-color: #54c9f6;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -137,31 +143,31 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #00a4e4; }
+  border-right-color: #54c9f6; }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #00a4e4; }
+  border-left-color: #54c9f6; }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #00a4e4; }
+  border-bottom-color: #54c9f6; }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #00a4e4; }
+  border-top-color: #54c9f6; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #4bccff; }
+  border-right-color: #b5e7fb; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #4bccff; }
+  border-left-color: #b5e7fb; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #4bccff; }
+  border-bottom-color: #b5e7fb; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #4bccff; }
+  border-top-color: #b5e7fb; }
 
 /*********************************************
  * PROGRESS BAR
@@ -170,7 +176,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #00a4e4;
+  background: #54c9f6;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -181,37 +187,37 @@ body {
  * SLIDE NUMBER
  *********************************************/
 .reveal .slide-number {
-  color: #00a4e4; }
+  color: #54c9f6; }
 
 /* could insert a media query here to adjust font size / slide-size for larger screens */
 /* @media screen and (min-width: 900px and min-height: 600px ) ... */
 .reveal .highlight {
   color: #00a4e4; }
 
-.reveal div.ribbon > img {
+.reveal .ribbon > * {
   vertical-align: middle;
   height: 128px;
   background: none;
   border: none;
   box-shadow: none;
   margin: 0; }
-.reveal div.ribbon.small > img {
+.reveal .ribbon.small > * {
   height: 64px; }
-.reveal div.ribbon.big > img {
+.reveal .ribbon.big > * {
   height: 256px; }
-.reveal div.ribbon.ascent > img {
+.reveal .ribbon.ascent > * {
   vertical-align: baseline; }
-  .reveal div.ribbon.ascent > img:nth-child(1) {
+  .reveal .ribbon.ascent > *:nth-child(1) {
     height: 64px; }
-  .reveal div.ribbon.ascent > img:nth-child(2) {
+  .reveal .ribbon.ascent > *:nth-child(2) {
     height: 128px; }
-  .reveal div.ribbon.ascent > img:nth-child(3) {
+  .reveal .ribbon.ascent > *:nth-child(3) {
     height: 256px; }
 
-.reveal img.plain {
-  border: none;
-  background: none;
-  box-shadow: none;
+.reveal img, .reveal svg {
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
   max-height: 60vh; }
 
 /* Color Schemes */
@@ -233,8 +239,8 @@ body {
     border-radius: 1em;
     padding: 1em;
     min-height: 3em;
-    background-color: #d7b354;
-    color: #314451; }
+    background-color: #ccab8e;
+    color: #4b4846; }
   .reveal .comment .content:before {
     position: absolute;
     width: 0;
@@ -242,7 +248,7 @@ body {
     right: 100%;
     border: 1em solid transparent;
     border-left-width: 0;
-    border-right-color: #d7b354;
+    border-right-color: #ccab8e;
     content: ' '; }
 
 .reveal .comment.right .content {
@@ -250,7 +256,7 @@ body {
   margin-right: 1em; }
 .reveal .comment.right .content:before {
   left: 100%;
-  border-left: 1em solid #d7b354;
+  border-left: 1em solid #ccab8e;
   border-right-width: 0; }
 
 .reveal .comment.bottom .content {
@@ -262,7 +268,7 @@ body {
   margin-left: -1em;
   border: 1em solid transparent;
   border-bottom-width: 0;
-  border-top: 1em solid #d7b354; }
+  border-top: 1em solid #ccab8e; }
 
 .reveal a.no-roll {
   -webkit-perspective: 0;
@@ -288,16 +294,22 @@ body {
   background-color: #b2382d; }
 
 table.support {
-  display: inline-block; }
+  display: inline-block;
+  margin: 0 auto; }
   table.support tr {
-    display: inline-flex;
+    display: flex;
     align-items: baseline; }
+    table.support tr:first-child td {
+      padding: .25em; }
   table.support td {
     display: block;
-    width: 96px;
-    flex: none;
+    max-width: 140px;
+    flex: 1;
     text-align: center;
-    padding: 0 0.5em 0.5em 0; }
+    padding: 0.25em;
+    border: .2em solid transparent;
+    background-clip: padding-box;
+    border-radius: .3em; }
     table.support td img {
       border: none;
       margin: 0;
@@ -305,5 +317,11 @@ table.support {
       background: none;
       width: 100%;
       vertical-align: bottom; }
+  table.support .support {
+    background-color: #8fa971; }
+  table.support .partial-support {
+    background-color: #e8c373; }
+  table.support .no-support {
+    background-color: #d87363; }
 
 /*# sourceMappingURL=bear.css.map */
