@@ -21,6 +21,7 @@ for (var i = 0; i < codes.length; i++) {
     content = content.replace(/>/g, '&gt;');
 
     code.innerHTML = content;
+    indent = undefined;
 }
 
 function browserIcon(browser) {

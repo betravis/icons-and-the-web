@@ -4,10 +4,10 @@
 
 <section>
     <section>
-        <h2>Anatomy of an icon font</h2>
-    </section>
-    <section>
-        <img src='resources/font-anatomy.png' class='plain'/>
+        <figure>
+            <img src='resources/font-anatomy.png' class='plain'/>
+            <figcaption>Anatomy of a font</figcaption>
+        </figure>
         <aside class='notes'>
             * A font maps a character or set of characters to their visual representation (glyph).
             * Generally vector based for clean rescaling
@@ -84,11 +84,40 @@
             CR(37), S(7), FF(32), IE(11 down), O(24), iOS(8), A(4.1.2, 4.3), mCR(31)
         </aside>
     </section>
+</section>
+
+<section>
     <section>
         <h2>but it's still a hack&hellip;</h2>
     </section>
+
+    <section>
+        <h2>
+            <svg style='height:3em' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55'>
+                <use xlink:href='resources/farm-animals-monotone.svg#pig-monotone' />
+            </svg>
+            Sizing &amp; positioning
+        </h2>
+    </section>
+
+    <section>
+        <h2>Fallbacks &amp; accessibility</h2>
+    </section>
+    <section class='align-center'>
+        <h2>
+            <svg style='height:3em' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55'>
+                <use xlink:href='resources/farm-animals-monotone.svg#pig-monotone' />
+            </svg>
+            Pig
+        </h2>
+        <p>vs</p>
+        <h2>p Pig</h2>
+        <p>vs</p>
+        <h2>&#xe400; Pig</h2>
+    </section>
 </section>
 
+{% comment %}
 <section>
     <section>
         <h2>Alternate Glyph Mappings</h2>
@@ -179,7 +208,9 @@
         </aside>
     </section>
 </section>
+{% endcomment %}
 
+{% comment %}
 <section>
     <section>
         <h2>Bulletproof Font Icons</h2>
@@ -216,6 +247,7 @@
         <h2>Rabbit</h2>
     </section>
 </section>
+{% endcomment %}
 
 <section>
     <section>
