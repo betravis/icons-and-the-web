@@ -7,8 +7,8 @@
 
 
 // Default mixins and settings -----------------
-@import "../reveal.js/css/theme/template/mixins";
-@import "../reveal.js/css/theme/template/settings";
+@import "mixins";
+@import "settings";
 // ---------------------------------------------
 
 // Include theme-specific fonts
@@ -113,7 +113,7 @@ svg use {
 .reveal section.align-right { text-align: right; }
 
 // Theme template ------------------------------
-@import "../reveal.js/css/theme/template/theme";
+@import "theme";
 // ---------------------------------------------
 
 /* could insert a media query here to adjust font size / slide-size for larger screens */
