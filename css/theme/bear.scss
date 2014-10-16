@@ -281,3 +281,8 @@ table.support {
         background-color: $no-support-color;
     }
 }
+
+li.custom-marker {
+    list-style-type: none;
+    margin-left: -1em;
+}
