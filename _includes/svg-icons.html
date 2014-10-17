@@ -66,7 +66,7 @@
         <pre><code class='html'><!--
         <html>
           <p>Some text</p>
-          <svg xmlns="http://www.w3.org/2000/svg"
+          <svg [xmlns="http://www.w3.org/2000/svg"]
             viewBox="0 0 100 100">
             <path d="&hellip;" />
           </svg>
@@ -79,8 +79,8 @@
     </section>
     <section>
         <figure class='flex-ribbon'>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' height='10em'>
-                <use xlink:href="resources/farm-animals-monotone.svg#rabbit-duotone" style="fill:#acf0f2"/>
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' height='10em'>
+            <use xlink:href="resources/farm-animals-monotone.svg#rabbit-duotone" style="fill:#acf0f2"/>
         </svg>
         <pre><code class='css'><!--
         p { color: blue; }
@@ -174,7 +174,7 @@
         External Symbol
         <pre><code class='html'><!--
         <html>
-        <svg xmlns="&hellip;" xmlns:xlink="&hellip;">
+        <svg xmlns:xlink="&hellip;">
             <use xlink:href="animals.svg#chicken" />
         </svg>
         </html>
@@ -182,7 +182,7 @@
     </section>
     <section>
         <figure>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' style='margin-top: -15%'>
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 45 55' style='margin-top: -15%'>
                 <use xlink:href="resources/farm-animals.svg#chicken-symbol" />
             </svg>
             <pre><code class='svg'><!--
@@ -191,15 +191,15 @@
         </figure>
     </section>
     <section>
-        <h2>Accessible</h2>
+        <h2>Accessibility</h2>
     </section>
     <section>
         <pre><code class='svg'><!--
-        <symbol id="chicken">
+        <svg xmlns:xlink="&hellip;">
             <title>Chicken</title>
             <desc>A chicken icon</desc>
-            <path d="&hellip;" />
-        </symbol>
+            <use xlink:href="animals.svg#chicken" />
+        </svg>
         --></code></pre>
     </section>
     <section>

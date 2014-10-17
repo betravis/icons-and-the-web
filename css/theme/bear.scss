@@ -73,14 +73,14 @@ svg use {
     }
     .state-background {
         background-color: darken($alternateBackgroundColor, 30%);
-        background-image: url(/resources/icon-bg-tile.png);
+        background-image: url(../../resources/icon-bg-tile.png);
         background-blend-mode: multiply;
     }
 }
 
 .about {
     .state-background {
-        background-image: url(/resources/web-engine-team.jpg);
+        background-image: url(../../resources/web-engine-team.jpg);
         background-size: cover;
         background-position: center center;
         background-blend-mode: overlay;
